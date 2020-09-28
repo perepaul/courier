@@ -2,10 +2,13 @@
     <ul id="slide-out" class="sidenav">
         <li>
             <ul class="collapsible p-t-30">
-                    <li>
-                    <a href="index.html" class="collapsible-header"><i class="material-icons">repeat</i><span class="hide-menu">Back To Home</span></a>
+                <li>
+                    <a href="index.html" class="collapsible-header"><i class="material-icons">dashboard</i><span class="hide-menu">Dashboard</span></a>
                 </li>
                 <li>
+                    <a href="{{route('shipment.index')}}" class="collapsible-header"><i class="material-icons">directions_car</i><span class="hide-menu">Shipments</span></a>
+                </li>
+                <!-- <li>
                     <a class="collapsible-header has-arrow"><i class="material-icons">clear_all</i><span class="hide-menu">Multi Levels</span></a>
                     <div class="collapsible-body">
                         <ul class="collapsible" data-collapsible="accordion">
@@ -55,7 +58,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </li>
     </ul>

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('uploads/images/favicon.png')}}">
     <title>Materialart Admin Template</title>
     <link href="{{asset('css/admin/app.css')}}" rel="stylesheet">
+  
     <!-- This page CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -404,6 +405,7 @@
     <!-- All Required js -->
     <!-- ============================================================== -->
     <script src="{{ asset('js/admin/app.js') }}"></script>
+
     <!-- <script src="{{ asset('js/admin/app.js') }}"></script> -->
     
 </body>
