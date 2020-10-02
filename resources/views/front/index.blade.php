@@ -209,30 +209,30 @@
                     </div>
                     <div class="testimonial-content">
                         <p class="wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s"> <i class="gray-clr fs-16">
-                                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                                <br> facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-                                <br> augue duis dolore te feugait nulla facilisi.
+                        This is by far the best courier company in USA,  for same day and overnight deliveries.<br>
+                        I ordered an urgent delivery of some critical documents my sister needed in  Birmingham. UK.<br>
+                        I was a bit doubtful as to the time of delivery but the customer service people advise me to use a diplomatic delivery service because I have <br> only two days to summit the documents.<br>
+                        I received it in less than 48 hours. expensive but fast and 100% relaible. Better than anyone. Highly recommended!
                             </i> </p>
-                        <h2 class="title-2 pt-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> <a href="#" class="white-clr fw-900"> Bushra Ahsani </a> </h2>
+                        <h2 class="title-2 pt-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> <a href="#" class="white-clr fw-900"> Riaz Hussain </a> </h2>
                     </div>
                 </div>
                 <div class="item">
                     <div class="testimonial-img darkclr-border theme-clr font-2">
-                        <img alt="" src="{{asset('uploads/front/block/testimonial-1.png')}}" />
+                        <img alt="" src="{{asset('uploads/front/block/testimonial-2.png')}}" />
                         <span>,,</span>
                     </div>
                     <div class="testimonial-content">
                         <p> <i class="gray-clr fs-16">
-                                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                                <br> facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-                                <br> augue duis dolore te feugait nulla facilisi.
+                        I was so much disappointed with the service of a few infamous delivery companies recently,<br>
+                         but these guys made me believe the opposite still exists! :) Great service. <br>Thanks!
                             </i> </p>
-                        <h2 class="title-2 pt-10"> <a href="#" class="white-clr fw-900"> Bushra Ahsani </a> </h2>
+                        <h2 class="title-2 pt-10"> <a href="#" class="white-clr fw-900"> Berty van Hensbergen </a> </h2>
                     </div>
                 </div>
                 <div class="item">
                     <div class="testimonial-img darkclr-border theme-clr font-2">
-                        <img alt="" src="{{asset('uploads/front/block/testimonial-1.png')}}" />
+                        <img alt="" src="{{asset('uploads/front/block/testimonial-3.jpg')}}" />
                         <span>,,</span>
                     </div>
                     <div class="testimonial-content">
