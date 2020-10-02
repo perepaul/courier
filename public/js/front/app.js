@@ -291,6 +291,454 @@ d.parent(".dropdown-menu").length&&(d=d.closest("li.dropdown").addClass("active"
 
 /*! WOW - v1.1.2 - 2016-04-08
 * Copyright (c) 2016 Matthieu Aussaguel;*/(function(){var a,b,c,d,e,f=function(a,b){return function(){return a.apply(b,arguments)}},g=[].indexOf||function(a){for(var b=0,c=this.length;c>b;b++)if(b in this&&this[b]===a)return b;return-1};b=function(){function a(){}return a.prototype.extend=function(a,b){var c,d;for(c in b)d=b[c],null==a[c]&&(a[c]=d);return a},a.prototype.isMobile=function(a){return/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)},a.prototype.createEvent=function(a,b,c,d){var e;return null==b&&(b=!1),null==c&&(c=!1),null==d&&(d=null),null!=document.createEvent?(e=document.createEvent("CustomEvent"),e.initCustomEvent(a,b,c,d)):null!=document.createEventObject?(e=document.createEventObject(),e.eventType=a):e.eventName=a,e},a.prototype.emitEvent=function(a,b){return null!=a.dispatchEvent?a.dispatchEvent(b):b in(null!=a)?a[b]():"on"+b in(null!=a)?a["on"+b]():void 0},a.prototype.addEvent=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):null!=a.attachEvent?a.attachEvent("on"+b,c):a[b]=c},a.prototype.removeEvent=function(a,b,c){return null!=a.removeEventListener?a.removeEventListener(b,c,!1):null!=a.detachEvent?a.detachEvent("on"+b,c):delete a[b]},a.prototype.innerHeight=function(){return"innerHeight"in window?window.innerHeight:document.documentElement.clientHeight},a}(),c=this.WeakMap||this.MozWeakMap||(c=function(){function a(){this.keys=[],this.values=[]}return a.prototype.get=function(a){var b,c,d,e,f;for(f=this.keys,b=d=0,e=f.length;e>d;b=++d)if(c=f[b],c===a)return this.values[b]},a.prototype.set=function(a,b){var c,d,e,f,g;for(g=this.keys,c=e=0,f=g.length;f>e;c=++e)if(d=g[c],d===a)return void(this.values[c]=b);return this.keys.push(a),this.values.push(b)},a}()),a=this.MutationObserver||this.WebkitMutationObserver||this.MozMutationObserver||(a=function(){function a(){"undefined"!=typeof console&&null!==console&&console.warn("MutationObserver is not supported by your browser."),"undefined"!=typeof console&&null!==console&&console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content.")}return a.notSupported=!0,a.prototype.observe=function(){},a}()),d=this.getComputedStyle||function(a,b){return this.getPropertyValue=function(b){var c;return"float"===b&&(b="styleFloat"),e.test(b)&&b.replace(e,function(a,b){return b.toUpperCase()}),(null!=(c=a.currentStyle)?c[b]:void 0)||null},this},e=/(\-([a-z]){1})/g,this.WOW=function(){function e(a){null==a&&(a={}),this.scrollCallback=f(this.scrollCallback,this),this.scrollHandler=f(this.scrollHandler,this),this.resetAnimation=f(this.resetAnimation,this),this.start=f(this.start,this),this.scrolled=!0,this.config=this.util().extend(a,this.defaults),null!=a.scrollContainer&&(this.config.scrollContainer=document.querySelector(a.scrollContainer)),this.animationNameCache=new c,this.wowEvent=this.util().createEvent(this.config.boxClass)}return e.prototype.defaults={boxClass:"wow",animateClass:"animated",offset:0,mobile:!0,live:!0,callback:null,scrollContainer:null},e.prototype.init=function(){var a;return this.element=window.document.documentElement,"interactive"===(a=document.readyState)||"complete"===a?this.start():this.util().addEvent(document,"DOMContentLoaded",this.start),this.finished=[]},e.prototype.start=function(){var b,c,d,e;if(this.stopped=!1,this.boxes=function(){var a,c,d,e;for(d=this.element.querySelectorAll("."+this.config.boxClass),e=[],a=0,c=d.length;c>a;a++)b=d[a],e.push(b);return e}.call(this),this.all=function(){var a,c,d,e;for(d=this.boxes,e=[],a=0,c=d.length;c>a;a++)b=d[a],e.push(b);return e}.call(this),this.boxes.length)if(this.disabled())this.resetStyle();else for(e=this.boxes,c=0,d=e.length;d>c;c++)b=e[c],this.applyStyle(b,!0);return this.disabled()||(this.util().addEvent(this.config.scrollContainer||window,"scroll",this.scrollHandler),this.util().addEvent(window,"resize",this.scrollHandler),this.interval=setInterval(this.scrollCallback,50)),this.config.live?new a(function(a){return function(b){var c,d,e,f,g;for(g=[],c=0,d=b.length;d>c;c++)f=b[c],g.push(function(){var a,b,c,d;for(c=f.addedNodes||[],d=[],a=0,b=c.length;b>a;a++)e=c[a],d.push(this.doSync(e));return d}.call(a));return g}}(this)).observe(document.body,{childList:!0,subtree:!0}):void 0},e.prototype.stop=function(){return this.stopped=!0,this.util().removeEvent(this.config.scrollContainer||window,"scroll",this.scrollHandler),this.util().removeEvent(window,"resize",this.scrollHandler),null!=this.interval?clearInterval(this.interval):void 0},e.prototype.sync=function(b){return a.notSupported?this.doSync(this.element):void 0},e.prototype.doSync=function(a){var b,c,d,e,f;if(null==a&&(a=this.element),1===a.nodeType){for(a=a.parentNode||a,e=a.querySelectorAll("."+this.config.boxClass),f=[],c=0,d=e.length;d>c;c++)b=e[c],g.call(this.all,b)<0?(this.boxes.push(b),this.all.push(b),this.stopped||this.disabled()?this.resetStyle():this.applyStyle(b,!0),f.push(this.scrolled=!0)):f.push(void 0);return f}},e.prototype.show=function(a){return this.applyStyle(a),a.className=a.className+" "+this.config.animateClass,null!=this.config.callback&&this.config.callback(a),this.util().emitEvent(a,this.wowEvent),this.util().addEvent(a,"animationend",this.resetAnimation),this.util().addEvent(a,"oanimationend",this.resetAnimation),this.util().addEvent(a,"webkitAnimationEnd",this.resetAnimation),this.util().addEvent(a,"MSAnimationEnd",this.resetAnimation),a},e.prototype.applyStyle=function(a,b){var c,d,e;return d=a.getAttribute("data-wow-duration"),c=a.getAttribute("data-wow-delay"),e=a.getAttribute("data-wow-iteration"),this.animate(function(f){return function(){return f.customStyle(a,b,d,c,e)}}(this))},e.prototype.animate=function(){return"requestAnimationFrame"in window?function(a){return window.requestAnimationFrame(a)}:function(a){return a()}}(),e.prototype.resetStyle=function(){var a,b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d[b],e.push(a.style.visibility="visible");return e},e.prototype.resetAnimation=function(a){var b;return a.type.toLowerCase().indexOf("animationend")>=0?(b=a.target||a.srcElement,b.className=b.className.replace(this.config.animateClass,"").trim()):void 0},e.prototype.customStyle=function(a,b,c,d,e){return b&&this.cacheAnimationName(a),a.style.visibility=b?"hidden":"visible",c&&this.vendorSet(a.style,{animationDuration:c}),d&&this.vendorSet(a.style,{animationDelay:d}),e&&this.vendorSet(a.style,{animationIterationCount:e}),this.vendorSet(a.style,{animationName:b?"none":this.cachedAnimationName(a)}),a},e.prototype.vendors=["moz","webkit"],e.prototype.vendorSet=function(a,b){var c,d,e,f;d=[];for(c in b)e=b[c],a[""+c]=e,d.push(function(){var b,d,g,h;for(g=this.vendors,h=[],b=0,d=g.length;d>b;b++)f=g[b],h.push(a[""+f+c.charAt(0).toUpperCase()+c.substr(1)]=e);return h}.call(this));return d},e.prototype.vendorCSS=function(a,b){var c,e,f,g,h,i;for(h=d(a),g=h.getPropertyCSSValue(b),f=this.vendors,c=0,e=f.length;e>c;c++)i=f[c],g=g||h.getPropertyCSSValue("-"+i+"-"+b);return g},e.prototype.animationName=function(a){var b;try{b=this.vendorCSS(a,"animation-name").cssText}catch(c){b=d(a).getPropertyValue("animation-name")}return"none"===b?"":b},e.prototype.cacheAnimationName=function(a){return this.animationNameCache.set(a,this.animationName(a))},e.prototype.cachedAnimationName=function(a){return this.animationNameCache.get(a)},e.prototype.scrollHandler=function(){return this.scrolled=!0},e.prototype.scrollCallback=function(){var a;return!this.scrolled||(this.scrolled=!1,this.boxes=function(){var b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d[b],a&&(this.isVisible(a)?this.show(a):e.push(a));return e}.call(this),this.boxes.length||this.config.live)?void 0:this.stop()},e.prototype.offsetTop=function(a){for(var b;void 0===a.offsetTop;)a=a.parentNode;for(b=a.offsetTop;a=a.offsetParent;)b+=a.offsetTop;return b},e.prototype.isVisible=function(a){var b,c,d,e,f;return c=a.getAttribute("data-wow-offset")||this.config.offset,f=this.config.scrollContainer&&this.config.scrollContainer.scrollTop||window.pageYOffset,e=f+Math.min(this.element.clientHeight,this.util().innerHeight())-c,d=this.offsetTop(a),b=d+a.clientHeight,e>=d&&b>=f},e.prototype.util=function(){return null!=this._util?this._util:this._util=new b},e.prototype.disabled=function(){return!this.config.mobile&&this.util().isMobile(navigator.userAgent)},e}()}).call(this);
+/**
+ * Simple data binder
+ *
+ * @author Mike Kalinin <www.intermike@gmail.com
+ * @link https://github.com/intermike/data.binder.js
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ */
+;(function ($, document, window, undefined)
+{
+
+    "use strict";
+
+    var pluginName = 'databinder';
+
+    var dataBinder = function (that, element, path)
+    {
+
+        var self = this;
+
+        this.that = that;
+        this.element = element;
+        this.path = path;
+        this.methods = {
+            'input': ['none', []],
+            'output': ['none', []],
+            'filterin': ['none', []],
+            'filterout': ['none', []],
+            'event': ['none', []]
+        };
+
+        var parts = $.map(element.data('bind').split(','), $.trim);
+
+        for (var i = 0, l = parts.length; i < l; i++) {
+            var $segments = $.map(parts[i].split(':'), $.trim);
+            var $m = $segments[0];
+            var $arg = $segments[1] ? $.map($segments[1].replace(/\]/g, "").split(/\[/), $.trim) : [''];
+            var $f = $arg.shift();
+
+            if ($m == 'in') {
+                this._add_method('input', $f, $arg);
+            } else if ($m == 'out') {
+                this._add_method('output', $f, $arg);
+            } else if ($m == 'f') {
+                this._add_method('filterin', $f, $arg);
+                this._add_method('filterout', $f, $arg);
+            } else if ($m == 'e') {
+                this._add_method('event', $f, $arg);
+            } else if ($m == 't') { //trigger
+                element.bind($f, $.proxy(function ()
+                {
+                    this.that._update();
+                }, this));
+            }
+        }
+
+        if (this.methods['input'][0] != 'none') {
+            element.bind('change recalculate', function (event)
+            {
+                self.event(event);
+            });
+        }
+
+        //Initializing associated data with empty value
+        this.that._data_set(path, this._run('filterin', ''));
+    };
+
+    dataBinder.prototype = {
+
+        read: function ()
+        {
+            var value = this._run('input', this.element);
+            value = this._run('filterin', value);
+            return value;
+        },
+        input: function ()
+        {
+            if (this.methods['input'][0] == 'none') return false;
+            var value = this.read();
+            var oldvalue = this.that._data_get(this.path);
+            this.that._data_set(this.path, value);
+            return oldvalue != value;
+        },
+        write: function (value)
+        {
+            this._run('output', this.element, this._run('filterout', value), value);
+            return true;
+        },
+        output: function ()
+        {
+            if (this.methods['output'][0] == 'none') return false;
+            var value = this.that._data_get(this.path);
+            return this.write(value);
+        },
+        event: function (event)
+        {
+            var is_updated = this.input();
+
+            if (this._custom_events(event))
+                is_updated = true;
+
+            if (is_updated && !this.element.is('[data-bind-no-trigger]')) this.that._update();
+        },
+
+        _custom_events: function (event)
+        {
+            if (this.methods['event'][0] == 'none') return false;
+
+            return Boolean(this._run('event', event, this.element));
+        },
+
+        _add_method: function (type, func, arg)
+        {
+            this.methods[type] = [typeof this.that.opts[type][func] == 'function' ? func : 'none', arg];
+        },
+
+        _run: function ()
+        {
+
+            if (arguments.length === 0) return;
+            var args = [];
+            Array.prototype.push.apply(args, arguments);
+
+            var type = args.shift();
+
+            var method = this.that.opts[type][this.methods[type][0]];
+            if (typeof method == 'undefined') return null;
+            return this.that.opts[type][this.methods[type][0]].apply(this, args.concat(this.methods[type][1]));
+        }
+    };
+
+    $[pluginName] = function (parent, options)
+    {
+
+        var self = this;
+
+        var defaults = {
+            money: {
+                decimals: 2,
+                separator: ',',
+                thousands: '`',
+                cutzero: true
+            },
+            noInitial: false
+        };
+
+        self.data = options.data ? $.extend({}, options.data) : {};
+        self.binder = {};
+
+        delete options.data;
+
+        self.opts = {};
+
+        self.opts.calculate = function (data)
+        {
+        };
+
+        self.opts.event = {
+            none: function (element)
+            {
+                return false;
+            },
+            click: function (element)
+            {
+                return true;
+            }
+        };
+
+        self.opts.input = {
+            none: function (element)
+            {
+                return null;
+            },
+            text: function (element)
+            {
+                return element.text();
+            },
+            html: function (element)
+            {
+                return element.html();
+            },
+            value: function (element)
+            {
+                return element.val();
+            },
+            radio: function (element)
+            {
+                return $("input:radio[name ='" + element.attr('name') + "']:checked").val();
+            },
+            checkbox: function (element)
+            {
+                return element.is(':checked') ? element.val() : null;
+            },
+            prop: function (element, property)
+            {
+                return element.prop(property);
+            },
+            attr: function (element, attribute)
+            {
+                return element.attr(attribute);
+            },
+            'class': function (element, attribute)
+            {
+                return element.hasClass(attribute);
+            },
+            visible: function (element, attribute)
+            {
+                return element.is(':visible');
+            },
+            submit: function (element, attribute)
+            {
+                return true;
+            }
+        };
+
+        self.opts.output = {
+            none: function (element, value, unformatted)
+            {
+                return null;
+            },
+            text: function (element, value, unformatted)
+            {
+                return element.text(value);
+            },
+            html: function (element, value, unformatted)
+            {
+                return element.html(value);
+            },
+            value: function (element, value, unformatted)
+            {
+                return element.val(value);
+            },
+            prop: function (element, value, unformatted, property)
+            {
+                element.prop(property, value);
+            },
+            attr: function (element, value, unformatted, attribute)
+            {
+                element.attr(attribute, value);
+            },
+            'class': function (element, value, unformatted, attribute)
+            {
+                element.toggleClass(attribute, unformatted ? true : false);
+            },
+            visible: function (element, value, unformatted, attribute)
+            {
+                var v = unformatted ? true : false;
+                if (attribute == 'not') v = !v;
+                element.toggle(v);
+            },
+            price: function (element, value, unformatted)
+            {
+                element.find('.pr-sign').toggle(unformatted <= 0);
+                element.find('.pr-wrap').toggle(unformatted != 0);
+                element.find('.pr').text(value.replace('-', ''));
+            }
+        };
+
+        self.opts.filterin = {
+            none: function (value)
+            {
+                return value;
+            },
+            int: function (value)
+            {
+                value = parseInt(value);
+                if (isNaN(value)) value = 0;
+                return value;
+            },
+            float: function (value)
+            {
+                if (!value) return 0.0;
+                value = parseFloat(value.replace(/[^0-9\.\-]/, ''));
+                if (isNaN(value)) value = 0.0;
+                return value;
+            },
+            bool: function (value)
+            {
+                return Boolean(value);
+            },
+            currency: function (value)
+            {
+                return self.opts.filterin.float(value);
+            }
+        };
+
+        self.opts.filterout = {
+            none: function (value)
+            {
+                return value;
+            },
+            int: function (value)
+            {
+                return Math.round(value);
+            },
+            float: function (value)
+            {
+                return value.toFixed(2);
+            },
+            bool: function (value)
+            {
+                return Boolean(value);
+            },
+            currency: function (value)
+            {
+                var res = self.formatMoney(value, self.opts.money.decimals, self.opts.money.separator, self.opts.money.thousands);
+                if (self.opts.money.cutzero) res = res.replace(new RegExp('\\' + self.opts.money.separator + '0+$'), '');
+                return res;
+            }
+        };
+
+        self.opts = $.extend(true, {}, defaults, self.opts, options);
+
+        parent.on('recalculate', function ()
+        {
+            self._get();
+            self._update();
+        });
+
+        this.init(parent);
+    };
+
+    $[pluginName].prototype = {
+
+        init: function (parent)
+        {
+
+            var self = this;
+
+            self.binder = [];
+
+            parent.find('[data-bind]').each(function ()
+            {
+                var element = $(this);
+                var attr = element.attr('data-name');
+                if (typeof attr == 'undefined' || attr == false) attr = element.attr('name');
+                if (!attr) return;
+
+                var path = $.map(attr.replace(/\]/g, "").split(/\[/), $.trim);
+
+                var index = self.binder.push(new dataBinder(self, element, path));
+                $.data(element.get(0), 'data-binding', self.binder[index - 1]);
+            });
+
+            this._get();
+            if (!self.opts.noInitial) {
+                this._update();
+            }
+        },
+
+        _data_set: function getValueAt(keys, value)
+        {
+            var object = this.data,
+                i      = 0,
+                len    = keys.length;
+
+            while (i < len - 1) {
+                if (typeof object[keys[i]] == 'undefined')
+                    object[keys[i]] = {};
+
+                object = object[keys[i]];
+
+                i++;
+            }
+
+            var oldvalue = object[keys[i]];
+            object[keys[i]] = value;
+            return oldvalue;
+        },
+
+        _data_get: function getValueAt(keys, def)
+        {
+            var object = this.data,
+                i      = 0,
+                len    = keys.length;
+
+            while (i < len - 1) {
+
+                if (typeof object[keys[i]] == 'undefined')
+                    object[keys[i]] = {};
+
+                object = object[keys[i]];
+                i++;
+            }
+
+            if (typeof object[keys[i]] == 'undefined')
+                return def;
+
+            return object[keys[i]];
+        },
+
+        _get: function ()
+        {
+            for (var i = 0, l = this.binder.length; i < l; i++)
+                this.binder[i].input();
+            for (i = 0, l = this.binder.length; i < l; i++)
+                this.binder[i]._custom_events();
+        },
+
+        _set: function ()
+        {
+            for (var i = 0, l = this.binder.length; i < l; i++)
+                this.binder[i].output();
+        },
+
+        _update: function ()
+        {
+            var self = this;
+            if (typeof this.opts.calculate == 'function') {
+                this.opts.calculate(this.data, function (newdata)
+                {
+                    self.data = newdata;
+                    self._set();
+                });
+            } else {
+                self._set();
+            }
+        },
+
+        formatMoney: function (n, c, d, t)
+        {
+            var c = isNaN(c = Math.abs(c)) ? 2 : c,
+                d = d == undefined ? "." : d,
+                t = t == undefined ? ":" : t,
+                s = n < 0 ? "-" : "",
+                i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                j = (j = i.length) > 3 ? j % 3 : 0;
+            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+        }
+    };
+
+    $.fn[pluginName] = function (options)
+    {
+        var instance = new $[pluginName](this, options);
+
+        this.each(function ()
+        {
+            $.data(this, pluginName, instance);
+        });
+
+        return instance;
+    };
+
+    return $.fn[pluginName];
+
+})(jQuery, document, window);
+
+
 'use strict';
 
 // Cache
@@ -301,54 +749,53 @@ var testimonialSlider = $('.testimonial-slider');
 var countdownTimer1 = $("#countdown-timer1");
 var wowDiv = $('body > main div');
 
-$(window).on('load', function () {
+$(window).on('load', function() {
     /*------- Preloader --------*/
     $('#preloader').delay(1000).fadeOut(200);
 
     /*------------------- Style Switcher Files  -------------------*/
-//    $('head').append('<link href="assets/css/multicolor/theme-color.css" rel="stylesheet" id="theme-config-link" />');
-//    $('head').append('<script src="assets/js/theme-config.js" type="text/javascript"></script>');
-//    $('head').append('<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>');
+    //    $('head').append('<link href="assets/css/multicolor/theme-color.css" rel="stylesheet" id="theme-config-link" />');
+    //    $('head').append('<script src="assets/js/theme-config.js" type="text/javascript"></script>');
+    //    $('head').append('<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>');
     /*------------------- ./Style Switcher Files  -------------------*/
 });
 
-$(window).on('scroll', function () {
+$(window).on('scroll', function() {
     /*------- Scroll To Top --------*/
     if ($(this).scrollTop() > 100) {
-        toTop.css({bottom: '0px'});
-    }
-    else {
-        toTop.css({bottom: '-150px'});
+        toTop.css({ bottom: '0px' });
+    } else {
+        toTop.css({ bottom: '-150px' });
     }
 
 });
 
-$(function () {
+$(function() {
 
     // --------------------------- Sticky Header ------------------------ //
-    (function () {
+    (function() {
         if ($(window).width() > 760) {
-            $(".menu-bar").sticky({topSpacing: 0});
+            $(".menu-bar").sticky({ topSpacing: 0 });
         }
     }());
 
     /*------- Search Popup --------*/
-    (function ($) {
+    (function($) {
         'use strict';
         // Popup for Menu and Search Links in the Header
-        $('.search').on('click', function () {
+        $('.search').on('click', function() {
             searchPopup.fadeIn(250);
             $('.search-popup .search-query').focus();
         });
-        $('.close-search').on('click', function () {
+        $('.close-search').on('click', function() {
             searchPopup.fadeOut(250);
         });
     })($);
 
     /*------- Scroll To Top Animate --------*/
-    (function () {
-        toTop.click(function () {
-            $('html, body').animate({scrollTop: 0}, 800);
+    (function() {
+        toTop.click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 800);
             return false;
         });
     }());
@@ -363,7 +810,7 @@ $(function () {
             nav: true,
             autoplay: true,
             responsive: {
-                0: {items: 1}
+                0: { items: 1 }
             },
             navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
         });
@@ -374,74 +821,28 @@ $(function () {
     }
 
     /* --------------------------- Coundown Timer ------------------------ */
-    (function () {
+    (function() {
         if (countdownTimer1.length) {
-            countdownTimer1.countdown("2017/05/18", function (event) {
-                var $this = $(this).html(event.strftime(''
-                        + '<span>%D</span> days '
-                        + '<span>%H</span> hours '
-                        + '<span>%M</span> mins '
-                        + '<span>%S</span> secs'));
+            countdownTimer1.countdown("2017/05/18", function(event) {
+                var $this = $(this).html(event.strftime('' +
+                    '<span>%D</span> days ' +
+                    '<span>%H</span> hours ' +
+                    '<span>%M</span> mins ' +
+                    '<span>%S</span> secs'));
             });
         }
     }());
 
-    /*------- Google Map --------*/
-    (function () {
-        var LocationData = [
-            [49.2812668, -123.1035942, "26 E Hastings St, Vancouver"],
-            [49.2814064, -123.1025187, "71 E Hastings St, Vancouver"],
-            [49.2812336, -123.1020622, "122 E Hastings St, Vancouver"],
-            [49.2813564, -123.1012253, "138 E Hastings St, Vancouver"],
-            [49.2811625, -123.0985032, "242 E Hastings St, Vancouver"]
-        ];
-
-        function initialize()
-        {
-            var map = new google.maps.Map(document.getElementById('map-canvas'));
-            var bounds = new google.maps.LatLngBounds();
-            var infowindow = new google.maps.InfoWindow();
-
-            for (var i in LocationData)
-            {
-                var p = LocationData[i];
-                var latlng = new google.maps.LatLng(p[0], p[1]);
-                bounds.extend(latlng);
-
-                var marker = new google.maps.Marker({
-                    position: latlng,
-                    map: map,
-                    title: p[2]
-                });
-
-                google.maps.event.addListener(marker, 'click', function () {
-                    infowindow.setContent(this.title);
-                    infowindow.open(map, this);
-                });
-            }
-
-            map.fitBounds(bounds);
-        }
-
-        try {
-            google.maps.event.addDomListener(window, 'load', initialize);
-        } catch (e) {
-            console && console.error(e.message);
-        }
-
-    }());
-
     /*------- Calculator --------*/
-    (function () {
+    (function() {
 
-        if (typeof $.fn.databinder == 'undefined')
-        {
+        if (typeof $.fn.databinder == 'undefined') {
             return;
         }
 
-        $('.calculate-form').on('changed.bs.select', function () {
+        $('.calculate-form').on('changed.bs.select', function() {
             $(this).trigger('recalculate');
-        }).on('keyup', ':input', function () {
+        }).on('keyup', ':input', function() {
             $(this).trigger('recalculate');
         }).databinder({
             money: {
@@ -450,7 +851,7 @@ $(function () {
                 thousands: ' ',
                 cutzero: false
             },
-            calculate: function (data, callback) {
+            calculate: function(data, callback) {
                 try {
                     // Example: minimal cost
                     data.min = 15;
@@ -470,14 +871,12 @@ $(function () {
                     if (typeof data.package == 'string' && data.package) {
                         try {
                             eval('cost = ' + data.package + ';');
-                        } catch (e) {
-                        }
+                        } catch (e) {}
                     }
 
                     cost = Math.max(cost, data.min);
 
                     data.cost = cost ? cost : null;
-
                     callback(data);
 
                 } catch (e) {
@@ -488,5 +887,47 @@ $(function () {
 
     }());
 
-});
+    /*------- Google Map --------*/
+    (function() {
+        var LocationData = [
+            [49.2812668, -123.1035942, "26 E Hastings St, Vancouver"],
+            [49.2814064, -123.1025187, "71 E Hastings St, Vancouver"],
+            [49.2812336, -123.1020622, "122 E Hastings St, Vancouver"],
+            [49.2813564, -123.1012253, "138 E Hastings St, Vancouver"],
+            [49.2811625, -123.0985032, "242 E Hastings St, Vancouver"]
+        ];
 
+        function initialize() {
+            var map = new google.maps.Map(document.getElementById('map-canvas'));
+            var bounds = new google.maps.LatLngBounds();
+            var infowindow = new google.maps.InfoWindow();
+
+            for (var i in LocationData) {
+                var p = LocationData[i];
+                var latlng = new google.maps.LatLng(p[0], p[1]);
+                bounds.extend(latlng);
+
+                var marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map,
+                    title: p[2]
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(this.title);
+                    infowindow.open(map, this);
+                });
+            }
+
+            map.fitBounds(bounds);
+        }
+
+        try {
+            google.maps.event.addDomListener(window, 'load', initialize);
+        } catch (e) {
+            console && console.error(e.message);
+        }
+
+    }());
+
+});

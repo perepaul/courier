@@ -20,6 +20,8 @@ class CreateShipmentsTable extends Migration
             $table->string('address');
             $table->string('email');
             $table->string('code');
+            $table->string('image');
+            $table->string('from_address');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

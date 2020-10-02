@@ -39,10 +39,27 @@
                                     <label for="com1">Recipient address</label>
                                 </div>
                             </div>
-                            <div class="col s12">
+                            <div class="col s12 m6 l6">
                                 <div class="input-field">
                                     <input id="em1" type="email" name="email">
                                     <label for="em1">Email</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>File</span>
+                                        <input type="file" name="image">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="input-field">
+                                    <input id="com2" type="text" name="from_address">
+                                    <label for="com2">From address</label>
                                 </div>
                             </div>
                             <!-- <div class="col s12">

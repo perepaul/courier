@@ -16,7 +16,7 @@ class ShipmentController extends Controller
      */
     public function index()
     {
-        $shipments = shipment::paginate(1);
+        $shipments = shipment::paginate(10);
         return view('admin.shipment.index',compact('shipments'));
     }
 
@@ -43,8 +43,16 @@ class ShipmentController extends Controller
             'phone'=>'required|string',
             'address'=>'required|string',
             'email'=>'required|string',
+            'image' => 'image|mimes:jpg,jpeg,png',
+            'from_address' => 'required'
         ]);
-        $shipment =  new shipment($request->except('_token'));
+        $shipment =  new shipment($request->except('_token','image'));
+        if($request->hasFile('image'))
+        {
+            $filename = now().'.'.$request->image->extension();
+            $request->image->move(public_path(config('app.package_dir')),$filename);
+            $shipment->image = $filename;
+        }
         $shipment->code = Str::limit(uniqid(rand(10*45,80*75), true),15,'');
         $shipment->save();
         return redirect()->route('shipment.index');
@@ -72,16 +80,24 @@ class ShipmentController extends Controller
     public function updateStatus(Request $request, $id)
     {
          $shipment = shipment::findOrFail($id);
-         if($request->has('address')){
+         if($request->has('address') && !is_null($request->address)){
              $tracks = new tracks($request->except('_token','status'));
              $shipment->tracks()->save($tracks);
          }
-         if($request->has('status')){
-
+         if($request->has('status') && !is_null($request->status)){
+            // dd('here');
              $shipment->status = $request->status;
+            //  dd($shipment->status);
              $shipment->save();
          }
          return redirect()->back();
+    }
+
+    public function tracking(Request $request)
+    {
+        $shipment = shipment::where('code',$request->code)->first();
+        // dd($request->all());
+        return view('front.tracking',compact('shipment'));
     }
 
     /**
@@ -117,6 +133,7 @@ class ShipmentController extends Controller
     public function destroy(shipment $shipment)
     {
         $shipment->tracks()->delete();
+        @unlink(public_path(config('app.package_dir').$shipment->image));
         $shipment->delete();
         session()->flash('message', 'Shipment deleted');
         return redirect()->route('shipment.index');

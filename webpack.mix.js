@@ -33,15 +33,16 @@ mix.scripts([
         'resources/js/front/owl.carousel.min.js',
         'resources/js/front/jquery.sticky.js',
         'resources/js/front/wow.min.js',
-        'resources/js/front/theme.js'
+        'resources/js/front/data.binder.js',
+        'resources/js/front/theme.js',
     ], 'public/js/front/app.js')
     .styles([
-        'resources/css/front/bootstrap.min.css',
         'resources/css/front/bootstrap-select.min.css',
         'resources/css/front/font-awesome.min.css',
         'resources/css/front/elegant.css',
         'resources/css/front/owl.carousel.css',
         'resources/css/front/animate.css',
+        'resources/css/front/bootstrap.min.css',
         'resources/css/front/theme.css',
     ], 'public/css/front/app.css')
     .copy('resources/css/front/owl.video.play.html', 'public/css/front/')

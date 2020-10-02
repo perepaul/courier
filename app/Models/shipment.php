@@ -9,7 +9,7 @@ class shipment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name','address','phone','email'
+        'name','address','phone','email','image','from_address'
     ];
 
     protected $casts = [
@@ -19,5 +19,23 @@ class shipment extends Model
     public function tracks()
     {
         return $this->hasMany(tracks::class);
+    }
+
+    public function getStatusAttribute($value)
+    {
+        switch($value){
+            case 1:
+                return 'Pending';
+            case 2:
+                return 'Processing';
+            case 3:
+                return 'In Transit';
+            case 4:
+                return 'Awaiting Clearance';
+            case 5:
+                return 'Delivered';
+            default:
+                return 'Pending';
+        }
     }
 }

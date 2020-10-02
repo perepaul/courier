@@ -19,10 +19,11 @@
                             <div class="col s12">
                                 <div class="input-field">
                                     <select name="status" id="status">
-                                        <option value="1" {{$shipment->status == 1 ? 'selected':''}}>Pending</option>
-                                        <option value="2" {{$shipment->status == 2 ? 'selected':''}}>Proccessing</option>
-                                        <option value="3" {{$shipment->status == 3 ? 'selected':''}}>In Transit</option>
-                                        <option value="4" {{$shipment->status == 4 ? 'selected':''}}>Delivered</option>
+                                        <option value="1" {{$shipment->status == 'Pending' ? 'selected':''}}>Pending</option>
+                                        <option value="2" {{$shipment->status == 'Processing' ? 'selected':''}}>Proccessing</option>
+                                        <option value="3" {{$shipment->status == 'In Transit' ? 'selected':''}}>In Transit</option>
+                                        <option value="4" {{$shipment->status == 'Awaiting Clearance' ? 'selected':''}}>Awaiting Clearance</option>
+                                        <option value="4" {{$shipment->status == 'Delivered' ? 'selected':''}}>Delivered</option>
                                     </select>
                                     <label for="status">Status</label>
                                 </div>

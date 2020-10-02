@@ -18900,13 +18900,3 @@ Padding margin property
 .d-inline {
     display: inline !important;
 }
-
-.paginator-container nav {
-    color: black;
-    background-color: #fff;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-}
-
-.paginator-container nav ul.pagination li {}

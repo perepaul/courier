@@ -15,6 +15,9 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'phone' => env('APP_PHONE',''),
+    'email' => env('APP_EMAIL',''),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -27,6 +30,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
+    'package_dir'=>'uploads/package-images/',
 
     /*
     |--------------------------------------------------------------------------
