@@ -60,7 +60,7 @@
                 @isset($shipment)
                 <div class="row">
                     <div class="col-md-7 pad-30 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".30s">
-                        <img alt="" src="{{asset('uploads/front/block/product-1.jpg')}}" />
+                        <img alt="" src="{{asset(config('app.package_dir').'/'.$shipment->image)}}" />
                     </div>
                     <div class="col-md-5 pad-30 wow fadeInRight" data-wow-offset="50" data-wow-delay=".30s">
                         <div class="prod-info white-clr">
