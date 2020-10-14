@@ -138,7 +138,7 @@
                 @else
                 <div class="container">
                     <div class="alert alert-danger pad-30" role="alert">
-                        <p>This is a danger alert—check it out!</p>
+                        <p>We were unable to find your package!</p>
                     </div>
                 </div>
                 @endisset
