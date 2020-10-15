@@ -13,7 +13,7 @@
                 <li><a href="#">secured</a></li>
                 <li><a href="#">worldwide</a></li>
             </ul>
-            <h4 class="section-title effect animated wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> TOP HILL DELIVERY. <br> <span class="theme-clr"> courier </span> & <span class="theme-clr"> Diplomatic delivery </span> services </h4>
+            <h4 class="section-title effect animated wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> <span class="fs-36">TOP HILL DELIVERY EXPRESS. </span>  <br> <span class="theme-clr fs-16"> courier  &  Diplomatic delivery services</span>  </h4>
             <div class="pad-30"></div>
             <div class="col-md-8 col-md-offset-2 tracking-form text-left effect animated fadeInUp">
                 <h2 class="title-1"> track your product </h2> <span class="font2-light fs-12">Now you can track your product easily</span>
