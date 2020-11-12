@@ -3,7 +3,7 @@
     
 <!-- Mirrored from event-theme.com/themes/GO-Courier/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2020 12:51:42 GMT -->
 <head>
-        <title>Top Hill Delivery Express</title>
+        <title>Globatex Delivery</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -157,7 +157,7 @@
             <div class="theme-container container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p> Top Hill Delivery Express, © {{date('Y')}}, All rights reserved </p>
+                        <p> Globatex Delivery, © {{date('Y')}}, All rights reserved </p>
                     </div>
                    
                 </div>
