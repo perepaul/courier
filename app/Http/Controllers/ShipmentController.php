@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NotifyUserMailable;
 use App\Models\shipment;
 use App\Models\tracks;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class ShipmentController extends Controller
 {
@@ -55,6 +58,11 @@ class ShipmentController extends Controller
         }
         $shipment->code = Str::limit(uniqid(rand(10*45,80*75), true),15,'');
         $shipment->save();
+        try {
+            Mail::to($shipment->email)->send(new NotifyUserMailable($shipment));
+        } catch (\Throwable $th) {
+            Log::error($th);
+        }
         return redirect()->route('shipment.index');
     }
 
