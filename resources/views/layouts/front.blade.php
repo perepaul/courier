@@ -69,20 +69,20 @@
         <nav class="menu-bar font2-title1 white-clr">
             <div class="theme-container container">
                 <div class="row">
-                    <div class="col-md-2 col-sm-2">
+                    <div class="col-md-3 col-sm-3">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-logo" href="#">
-                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">THDE</h5>
+                        <a class="navbar-logo" href="{{url('/')}}">
+                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">GBX<small class="fs-12">Delivery</small></h5>
 
                             <!-- <img src="{{asset('uploads/front/logo/logo-2.png')}}" alt="logo" />  -->
                         </a>
                     </div>
-                    <div class="col-md-10 col-sm-10 fs-12">
+                    <div class="col-md-9 col-sm-9 fs-12">
                         <div id="navbar" class="collapse navbar-collapse no-pad">
                             <ul class="navbar-nav theme-menu">
                                 <li class="active">

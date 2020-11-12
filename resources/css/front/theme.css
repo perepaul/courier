@@ -3215,8 +3215,7 @@ a:hover,
         color: #f5ab35;
         font-weight: 700;
         font-size: 25px;
-        line-height: 30px;
-        letter-spacing: 5px;
+        line-height: 10px;
     }
     .top-bar2 ul {
         text-align: center;
@@ -3438,7 +3437,6 @@ a:hover,
     font-weight: 800;
     font-size: 30px;
     line-height: 32px;
-    letter-spacing: 5px;
 }
 
 
