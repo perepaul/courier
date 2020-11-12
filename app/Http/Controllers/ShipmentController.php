@@ -95,10 +95,12 @@ class ShipmentController extends Controller
 
     public function tracking(Request $request)
     {
-        $shipment = shipment::where('code',$request->code)->first();
+        $shipment = shipment::where('code',$request->code)->first() ?? null;
         // dd($request->all());
         return view('front.tracking',compact('shipment'));
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
