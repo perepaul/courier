@@ -13,6 +13,7 @@
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
         <script src="assets/plugins/iesupport/respond.js"></script>
         <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
     </head>
     <body id="home">
         <!-- Preloader -->
@@ -174,6 +175,28 @@
         <div class="to-top theme-clr-bg transition"> <i class="fa fa-angle-up"></i> </div>
 
         <script src="{{asset('js/front/app.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
+
+            @if($errors->any())
+            dd($errors->all());
+                @foreach($errors->all() as $error)
+                    <script>
+                        iziToast.error({
+                            title: 'Error',
+                            message: '{{$error}}',
+                        });
+                    </script>
+                @endforeach
+            @endif
+
+            @if(session()->has('message'))
+            <script>
+                iziToast.success({
+                    title: 'OK',
+                    message: '{{session()->get("message")}}',
+                });
+            </script>
+            @endif
 
     </body>
 
