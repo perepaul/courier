@@ -83,8 +83,8 @@
                         and port operation. Globatex Delivery has a large container ship and supply vessel operator in the world since 1996.
                         Our Line operates over 786 vessels and has a capacity of 4.1 million TEU. The company was founded in 1966. <br>
                         </p>
-                        <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s"><strong>Founded:</strong> 28 August 1966, Seattle, Washington, United States</p>
-                        <p class="wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s"><strong> Headquarters:</strong> Atlanta, Georgia, United States</p>
+                        <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s"><strong>Founded:</strong> 28 August 1966.</p>
+                        <p class="wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s"><strong> Headquarters:</strong> {{config('app.address')}}</p>
                         <p class="wow fadeInRight" data-wow-offset="50" data-wow-delay=".25s"><strong>Founder:</strong> Peters E. Casey</p>
                     </div>
                 </div>
