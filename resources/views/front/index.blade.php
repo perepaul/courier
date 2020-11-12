@@ -366,7 +366,8 @@
             </div>
             <div class="row">
                 <div class="col-md-8 wow fadeInRight" data-wow-offset="50" data-wow-delay=".20s">
-                    <form action="" method="post" class="text-black">
+                    <form action="{{route('send-mail')}}" method="post" class="text-black">
+                        @csrf
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Full name">
@@ -376,11 +377,15 @@
                             <input type="email" name="email" class="form-control" placeholder="Email Address">
                         </div>
                         <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Enter Subject">
+                        </div>
+                        <div class="form-group">
                             <label for="message">Message</label>
                             <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <div class="pull-right">
-                            <button type="button" class="btn btn-outline-primary btn-flat btn-lg">Send <i class="fa fa-paper-plane"></i></button>
+                            <button type="submit" class="btn btn-outline-primary btn-flat btn-lg">Send <i class="fa fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>

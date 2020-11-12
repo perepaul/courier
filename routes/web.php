@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShipmentController;
 
@@ -23,6 +24,7 @@ Route::get('/', function () {
 });
 
 Route::post('tracking', [ShipmentController::class,'tracking'])->name('shipment.tracking');
+Route::post('cantact',[EmailController::class,'sendMail'])->name('send-mail');
 // Route::get('tracking',[ShipmentController::class,'trackingPage'])->name('shipment.tracking.get');
 
 
