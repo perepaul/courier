@@ -15,8 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'phone' => env('APP_PHONE',''),
-    'email' => env('APP_EMAIL',''),
+    'phone' => env('APP_PHONE','+17805726052'),
+    'email' => env('APP_EMAIL','contact@globatexdelivery.com'),
     'address' => env('APP_ADDRESS','2267 Guenette St, Saint-Laurent, Quebec H4R 2E9, Canada.'),
 
     /*
