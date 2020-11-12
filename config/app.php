@@ -17,6 +17,7 @@ return [
 
     'phone' => env('APP_PHONE',''),
     'email' => env('APP_EMAIL',''),
+    'address' => env('APP_ADDRESS','2267 Guenette St, Saint-Laurent, Quebec H4R 2E9, Canada.'),
 
     /*
     |--------------------------------------------------------------------------
