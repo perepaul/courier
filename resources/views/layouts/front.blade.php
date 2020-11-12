@@ -3,7 +3,7 @@
     
 <!-- Mirrored from event-theme.com/themes/GO-Courier/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2020 12:51:42 GMT -->
 <head>
-        <title>Top Hill Delivery Express</title>
+        <title>Globatex Delivery</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,6 +13,7 @@
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
         <script src="assets/plugins/iesupport/respond.js"></script>
         <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
     </head>
     <body id="home">
         <!-- Preloader -->
@@ -69,20 +70,20 @@
         <nav class="menu-bar font2-title1 white-clr">
             <div class="theme-container container">
                 <div class="row">
-                    <div class="col-md-2 col-sm-2">
+                    <div class="col-md-3 col-sm-3">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-logo" href="#">
-                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">THDE</h5>
+                        <a class="navbar-logo" href="{{url('/')}}">
+                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">GBX<small class="fs-12">Delivery</small></h5>
 
                             <!-- <img src="{{asset('uploads/front/logo/logo-2.png')}}" alt="logo" />  -->
                         </a>
                     </div>
-                    <div class="col-md-10 col-sm-10 fs-12">
+                    <div class="col-md-9 col-sm-9 fs-12">
                         <div id="navbar" class="collapse navbar-collapse no-pad">
                             <ul class="navbar-nav theme-menu">
                                 <li class="active">
@@ -157,7 +158,7 @@
             <div class="theme-container container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p> Top Hill Delivery Express, © {{date('Y')}}, All rights reserved </p>
+                        <p> Globatex Delivery, © {{date('Y')}}, All rights reserved </p>
                     </div>
                    
                 </div>
@@ -174,6 +175,28 @@
         <div class="to-top theme-clr-bg transition"> <i class="fa fa-angle-up"></i> </div>
 
         <script src="{{asset('js/front/app.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
+
+            @if($errors->any())
+            dd($errors->all());
+                @foreach($errors->all() as $error)
+                    <script>
+                        iziToast.error({
+                            title: 'Error',
+                            message: '{{$error}}',
+                        });
+                    </script>
+                @endforeach
+            @endif
+
+            @if(session()->has('message'))
+            <script>
+                iziToast.success({
+                    title: 'OK',
+                    message: '{{session()->get("message")}}',
+                });
+            </script>
+            @endif
 
     </body>
 

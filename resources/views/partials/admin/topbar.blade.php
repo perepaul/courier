@@ -191,7 +191,7 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#"><i class="material-icons">settings</i> Account Setting</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"><i class="material-icons">power_settings_new</i> Logout</a></li>
+                        <li><a href="{{route('logout')}}"><i class="material-icons">power_settings_new</i> Logout</a></li>
                     </ul>
                 </li>
             </ul>

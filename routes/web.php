@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShipmentController;
 
@@ -21,11 +22,18 @@ use App\Http\Controllers\ShipmentController;
 Route::get('/', function () {
     return view('front.index');
 });
-Route::post('tracking', [ShipmentController::class,'tracking'])->name('shipment.tracking');
+
+Route::match(['get','post'],'tracking', [ShipmentController::class,'tracking'])->name('shipment.tracking');
+Route::post('cantact',[EmailController::class,'sendMail'])->name('send-mail');
 // Route::get('tracking',[ShipmentController::class,'trackingPage'])->name('shipment.tracking.get');
 
 
 Route::middleware('auth:sanctum')->group(function() {
+    Route::get('logout',function(){
+        // dd('here');
+        \Illuminate\Support\Facades\Auth::guard('web')->logout();
+        return redirect()->to('/');
+    })->name('logout');
     Route::get('admin',function() {
         return view('admin.index');
     });
