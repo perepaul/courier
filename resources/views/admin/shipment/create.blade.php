@@ -62,6 +62,12 @@
                                     <label for="com2">From address</label>
                                 </div>
                             </div>
+                            <!--Material textarea-->
+                            <div class="input-field col s12">
+                                <textarea id="description" name="description" class="materialize-textarea"></textarea>
+                                <label for="description">Parcel Description</label>
+                            </div>
+
                             <!-- <div class="col s12">
                                 <div class="input-field">
                                     <input id="con2" type="text">
