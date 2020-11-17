@@ -65,8 +65,9 @@
                     <div class="col-md-5 pad-30 wow fadeInRight" data-wow-offset="50" data-wow-delay=".30s">
                         <div class="prod-info white-clr">
                             <ul>
-                                <li> <span class="title-2">Product Name:</span> <span class="fs-16">{{$shipment->name}}</span> </li>
+                                <li> <span class="title-2">Recipient:</span> <span class="fs-16">{{$shipment->name}}</span> </li>
                                 <li> <span class="title-2">Tracking code:</span> <span class="fs-16">{{$shipment->code}}</span> </li>
+                                <li> <span class="title-2">Parcel:</span> <span class="fs-16">{{$shipment->description}}</span> </li>
                                 <li> <span class="title-2">order date:</span> <span class="fs-16">{{$shipment->created_at}}</span> </li>
                                 <li> <span class="title-2">order status:</span> <span class="fs-16 theme-clr">{{$shipment->status}}</span> </li>
                                 <!-- <li> <span class="title-2">weight (kg):</span> <span class="fs-16">0.85 KG</span> </li>
