@@ -39,6 +39,7 @@ Route::middleware('auth:sanctum')->group(function() {
     });
     Route::resource('shipment',ShipmentController::class);
     Route::post('shipment/{id}/update-status',[ShipmentController::class,'updateStatus'])->name('shipment.update-status');
+    Route::get('track/{id}/update-address',[ShipmentController::class,'editTrackAddress'])->name('track.update-address');
 });
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
