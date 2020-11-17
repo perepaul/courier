@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('uploads/images/favicon.png')}}">
     <title>Materialart Admin Template</title>
     <link href="{{asset('css/admin/app.css')}}" rel="stylesheet">
+
+    @yield('css')
   
     <!-- This page CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -405,6 +407,8 @@
     <!-- All Required js -->
     <!-- ============================================================== -->
     <script src="{{ asset('js/admin/app.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js" integrity="sha512-7yA/d79yIhHPvcrSiB8S/7TyX0OxlccU8F/kuB8mHYjLlF1MInPbEohpoqfz0AILoq5hoD7lELZAYYHbyeEjag==" crossorigin="anonymous"></script>
+    @yield('js')
 
     <!-- <script src="{{ asset('js/admin/app.js') }}"></script> -->
     
