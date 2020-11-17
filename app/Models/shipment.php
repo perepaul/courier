@@ -9,7 +9,7 @@ class shipment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name','address','phone','email','image','from_address'
+        'name','address','phone','email','image','from_address','description'
     ];
 
     protected $casts = [

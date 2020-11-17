@@ -46,6 +46,10 @@
                                     <label for="em1">Email</label>
                                 </div>
                             </div>
+                            <div class="input-field col s12">
+                                <textarea id="description" name="description" class="materialize-textarea">{{$shipment->description}}</textarea>
+                                <label for="description">Parcel Description</label>
+                            </div>
                      
                         </div>
                         <div class="row">
