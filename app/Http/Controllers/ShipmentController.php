@@ -95,6 +95,19 @@ class ShipmentController extends Controller
          return redirect()->back();
     }
 
+    public function editTrackAddress(Request $request, $id)
+    {
+        try{
+            $track = tracks::findOrFail($id);
+            $track->address = $request->input('address');
+            $track->save();
+            return response()->json('updated sucessfully',201);
+        }catch(\Throwable $err){
+            \Log::error($err);
+            return response()->json([],400);
+        }
+    }
+
     public function tracking(Request $request)
     {
         $shipment = shipment::where('code',$request->code)->first();
