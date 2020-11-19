@@ -13,7 +13,7 @@
                 <li><a href="#">secured</a></li>
                 <li><a href="#">worldwide</a></li>
             </ul>
-            <h4 class="section-title effect animated wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> <span class="fs-36">Globatex Delivery. </span>  <br> <span class="theme-clr fs-16"> courier  &  Diplomatic delivery services</span>  </h4>
+            <h4 class="section-title effect animated wow fadeInUp" style="color:black" data-wow-offset="50" data-wow-delay=".20s"> <span class="fs-36">Oversea Link Delivery. </span>  <br> <span class="theme-clr fs-16"> courier  &  Diplomatic delivery services</span>  </h4>
             <div class="pad-30"></div>
             <div class="col-md-8 col-md-offset-2 tracking-form text-left effect animated fadeInUp">
                 <h2 class="title-1"> track your product </h2> <span class="font2-light fs-12">Now you can track your product easily</span>
@@ -268,7 +268,7 @@
                         <div class="pb-120 hidden-xs"></div>
                     </div>
                     <div class="delivery-img pt-10">
-                        <img alt="" src="{{asset('uploads/front/block/delivery.png')}}" class="wow slideInLeft" data-wow-offset="50" data-wow-delay=".20s" />
+                        <img alt="" src="{{asset('uploads/front/block/output-1-removebg-preview.png')}}" class="wow slideInLeft" data-wow-offset="50" data-wow-delay=".20s" />
                     </div>
                 </div>
             </div>

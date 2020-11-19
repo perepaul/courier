@@ -249,8 +249,10 @@ body {
     background: #ffffff;
     color: #acacac;
     -webkit-font-kerning: auto;
+    font-kerning: auto;
     -webkit-font-smoothing: antialiased;
     -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
     overflow-x: hidden;
     transition: all 0.4s ease-out 0s;
     -webkit-transition: all 0.4s ease-out 0s;
@@ -947,7 +949,7 @@ a:hover,
 .list-items li.active a,
 .header-main .theme-menu .dropdown-menu>li>a:hover,
 .header-main .theme-menu .dropdown-menu>li>a:focus {
-    color: #f5ab35;
+    color: #15b010;
 }
 
 .small,
@@ -963,7 +965,7 @@ a:hover,
 .pagintn>li a:focus,
 .widget-wrap.tag-cloud a:hover,
 .widget-wrap.tag-cloud a:focus {
-    background-color: #f5ab35;
+    background-color: #4287f5;
 }
 
 .clrbg-before:before,
@@ -971,11 +973,11 @@ a:hover,
 .social-icons li a:hover,
 .social-icons li a:focus,
 .pricing-box.active .btn-round {
-    background-color: #f5ab35;
+    background-color: #4287f5;
 }
 
 .banner {
-    border-bottom: 5px solid #f5ab35;
+    border-bottom: 5px solid #4287f5;
 }
 
 .form-control:focus,
@@ -986,7 +988,7 @@ a:hover,
 .btn-round:focus,
 .pricing-box.active,
 .pricing-box.active .btn-round {
-    border-color: #f5ab35;
+    border-color: #4287f5;
 }
 
 
@@ -995,22 +997,22 @@ a:hover,
 .theme-dark,
 .hvr-dark:hover,
 .hvr-dark:focus {
-    color: #df9826;
+    color: #4287f5;
 }
 
 .theme-dark-bg,
 .btn-1.dark {
-    background-color: #df9826;
+    background-color: #15b010;
 }
 
 .darkclr-border,
 .owl-dot.active {
-    border-color: #df9826;
+    border-color: #4287f5;
 }
 
 .big {
-    box-shadow: 0px 0px 10px #df9826, 0px 0px 20px #df9826, 0px 0px 30px #df9826, 0px 0px 50px #df9826, 0px 0px 60px #df9826;
-    background-color: #df9826;
+    box-shadow: 0px 0px 10px #4287f5, 0px 0px 20px #4287f5, 0px 0px 30px #4287f5, 0px 0px 50px #4287f5, 0px 0px 60px #4287f5;
+    background-color: #4287f5;
 }
 
 
@@ -1020,12 +1022,12 @@ a:hover,
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        background-color: #f5ab35;
+        background-color: #4287f5;
     }
     10% {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
-        background-color: #df9826;
+        background-color: #4287f5;
     }
     15% {
         -webkit-transform: scale(1);
@@ -1034,12 +1036,12 @@ a:hover,
     25% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        background-color: #f5ab35;
+        background-color: #4287f5;
     }
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        background-color: #f5ab35;
+        background-color: #4287f5;
     }
 }
 
@@ -1047,12 +1049,12 @@ a:hover,
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        background-color: #f5ab35;
+        background-color: #4287f5;
     }
     10% {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
-        background-color: #df9826;
+        background-color: #4287f5;
     }
     15% {
         -webkit-transform: scale(1);
@@ -1061,12 +1063,12 @@ a:hover,
     25% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        background-color: #f5ab35;
+        background-color: #4287f5;
     }
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        background-color: #f5ab35;
+        background-color: #4287f5;
     }
 }
 
@@ -1475,9 +1477,10 @@ a:hover,
     margin: 30px 0;
 }
 
-.banner-style2 {
+
+/* .banner-style2 {
     background-image: url('/uploads/front//background/banner-2.jpg');
-}
+} */
 
 
 /*-------------------- 3.1 - Banner Ends -------------------- */
@@ -3212,7 +3215,7 @@ a:hover,
         text-align: center;
     }
     .logo-text {
-        color: #f5ab35;
+        color: #453919;
         font-weight: 700;
         font-size: 25px;
         line-height: 10px;
@@ -3433,7 +3436,7 @@ a:hover,
 
 .logo-text {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #f5ab35;
+    color: #15b010;
     font-weight: 800;
     font-size: 30px;
     line-height: 32px;
