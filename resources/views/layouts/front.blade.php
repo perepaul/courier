@@ -78,7 +78,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-logo" href="{{url('/')}}">
-                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">OSL<small class="fs-12">Express</small></h5>
+                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">FES<small class="fs-12">ervice</small></h5>
 
                             <!-- <img src="{{asset('uploads/front/logo/logo-2.png')}}" alt="logo" />  -->
                         </a>
@@ -158,7 +158,7 @@
             <div class="theme-container container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p> Oversea Link Express, © {{date('Y')}}, All rights reserved </p>
+                        <p> First Express Service Inc., © {{date('Y')}}, All rights reserved </p>
                     </div>
                    
                 </div>
