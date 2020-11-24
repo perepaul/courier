@@ -13,7 +13,7 @@
                 <li><a href="#">secured</a></li>
                 <li><a href="#">worldwide</a></li>
             </ul>
-            <h4 class="section-title effect animated wow fadeInUp" style="color:black" data-wow-offset="50" data-wow-delay=".20s"> <span class="fs-36">Oversea Link Delivery. </span>  <br> <span class="theme-clr fs-16"> courier  &  Diplomatic delivery services</span>  </h4>
+            <h4 class="section-title effect animated wow fadeInUp" style="color:black" data-wow-offset="50" data-wow-delay=".20s"> <span class="fs-36">Oversea Link Express. </span>  <br> <span class="theme-clr fs-16"> courier  &  Diplomatic delivery services</span>  </h4>
             <div class="pad-30"></div>
             <div class="col-md-8 col-md-offset-2 tracking-form text-left effect animated fadeInUp">
                 <h2 class="title-1"> track your product </h2> <span class="font2-light fs-12">Now you can track your product easily</span>
@@ -79,17 +79,25 @@
                     <div class="about-us">
                         <h2 class="section-title pb-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> About Us </h2>
                         <p class="fs-16 wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s">
-                        Globatex Delivery is a Canadian integrated shipping company, active in ocean and inland freight transportation and associated with  Diplomatic Delivery Services, such as supply chain management 
-                        and port operation. Globatex Delivery has a large container ship and supply vessel operator in the world since 1996.
+                        Oversea Link Express is a Canadian integrated shipping company, active in ocean and inland freight transportation and associated with  Diplomatic Delivery Services, such as supply chain management 
+                        and port operation. Oversea Link Express has a large container ship and supply vessel operator in the world since 1996.
                         Our Line operates over 786 vessels and has a capacity of 4.1 million TEU. The company was founded in 1966. <br>
                         </p>
                         <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s"><strong>Founded:</strong> 28 August 1966.</p>
                         <p class="wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s"><strong> Headquarters:</strong> {{config('app.address')}}</p>
-                        <p class="wow fadeInRight" data-wow-offset="50" data-wow-delay=".25s"><strong>Founder:</strong> Peters E. Casey</p>
+                        <p class="wow fadeInRight" data-wow-offset="50" data-wow-delay=".25s"><strong>Founder:</strong> Benjamin Logan.</p>
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
                     <img alt="" src="{{asset('uploads/front/block/about-img.png')}}" class="wow slideInRight" data-wow-offset="50" data-wow-delay=".20s" />
+                </div>
+                <div class="row col-md-12">
+                        <div class="col-md-4 border wow slideLeft">
+                            <h3 class="bg-text" data-wow-offset="50" data-wow-delay=".20s"> About </h3>
+
+                        </div>
+                        <div class="col-md-4 border wow bounceUp">something</div>
+                        <div class="col-md-4 border wow fadeInDown">is available</div>
                 </div>
             </div>
         </div>
