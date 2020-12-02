@@ -30,6 +30,7 @@ Route::get('preview',function(){
 });
 
 Route::post('tracking', [ShipmentController::class,'tracking'])->name('shipment.tracking');
+Route::match(['get','post'],'tracking', [ShipmentController::class,'tracking'])->name('shipment.tracking');
 Route::post('cantact',[EmailController::class,'sendMail'])->name('send-mail');
 // Route::get('tracking',[ShipmentController::class,'trackingPage'])->name('shipment.tracking.get');
 
