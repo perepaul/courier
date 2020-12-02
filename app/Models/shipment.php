@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class shipment extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name','address','phone','email','image','from_address','description'
-    ];
+    protected $guarded = ['id'];
 
     protected $casts = [
         'tracks'=>'object'

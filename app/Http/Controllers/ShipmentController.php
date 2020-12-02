@@ -43,9 +43,12 @@ class ShipmentController extends Controller
             'phone'=>'required|string',
             'address'=>'required|string',
             'email'=>'required|string',
-            'image' => 'image|mimes:jpg,jpeg,png',
+            'image' => 'required|image|mimes:jpg,jpeg,png',
             'from_address' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'insurance' => 'required|numeric',
+            'quantity' => 'required|numeric',
+            'price' => 'required|numeric'
         ]);
         // dd($request->all());
         $shipment =  new shipment($request->except('_token','image'));

@@ -23,6 +23,12 @@ Route::get('/', function () {
     return view('front.index');
 });
 
+Route::get('preview',function(){
+    $pdf = app()->make('dompdf.wrapper');
+    $pdf->loadView('receipt.receipt');
+    return $pdf->stream();
+});
+
 Route::post('tracking', [ShipmentController::class,'tracking'])->name('shipment.tracking');
 Route::post('cantact',[EmailController::class,'sendMail'])->name('send-mail');
 // Route::get('tracking',[ShipmentController::class,'trackingPage'])->name('shipment.tracking.get');

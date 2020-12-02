@@ -78,7 +78,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-logo" href="{{url('/')}}">
-                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">FES<small class="fs-12">ervice</small></h5>
+                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">OLE<small class="fs-12">xpress</small></h5>
 
                             <!-- <img src="{{asset('uploads/front/logo/logo-2.png')}}" alt="logo" />  -->
                         </a>

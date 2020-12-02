@@ -50,6 +50,36 @@
                                 <textarea id="description" name="description" class="materialize-textarea">{{$shipment->description}}</textarea>
                                 <label for="description">Parcel Description</label>
                             </div>
+
+                            <div class="col s12 m4">
+                            <div class="input-field">
+                                <input id="poiodjfpoiejfpojdfpiop" class="@error('quantity') error @enderror" type="text" name="quantity" value="{{$shipment->quantity}}">
+                                <label for="poiodjfpoiejfpojdfpiop">Quantity</label>
+                                @error('quantity')
+                                <div class="errorTxt4"><div id="cpassword-error" class="error">{{$message}}</div></div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <div class="input-field">
+                                <input id="idifoiidnf" type="text" class="@error('insurance') error @enderror" name="insurance" value="{{$shipment->insurance}}" >
+                                <label for="okdnfoiidnf">Insurance</label>
+                                @error('insurance')
+                                <div class="errorTxt4"><div id="cpassword-error" class="error">{{$message}}</div></div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <div class="input-field">
+                                <input id="oiodfoidnfoidf" class="@error('price') error @enderror" type="text" name="price" value="{{$shipment->price}}">
+                                <label for="oiodfoidnfoidf">Price</label>
+                                @error('price')
+                                <div class="errorTxt4"><div id="cpassword-error" class="error">{{$message}}</div></div>
+                                @enderror
+                            </div>
+                        </div>
                      
                         </div>
                         <div class="row">
