@@ -158,7 +158,7 @@
             <div class="theme-container container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p> First Express Service Inc., © {{date('Y')}}, All rights reserved </p>
+                        <p> Overseas Link Express Inc., © {{date('Y')}}, All rights reserved </p>
                     </div>
                    
                 </div>
