@@ -44,26 +44,27 @@
                 </td>
                 <td class="col-md-4 p-0 m-0 p-1">
                     To <br>
-                    <strong>Name here</strong> <br>
-                    <strong>Phone:</strong> phone here <br>
-                    <strong>Address:</strong> and a very long or short address here <br>
+                    <strong>{{$shipment->name}}</strong> <br>
+                    <strong>Phone:</strong> {{$shipment->phone}} <br>
+                    <strong>Address:</strong> {{$shipment->address}}<br>
     
     
                 </td>
                 <td class="col-md-4 p-0 m-0 p-1">
                     <div class="barcode-wrapp text-center d-block">
                         <img src="{{asset('uploads/images/barcode.png')}}" alt="" style="width:60px; display:block;padding:0; margin:0">
-                        <small style="display: block; margin:0; padding:0; font-size:8px">randon numbers</small>
+                        <small style="display: block; margin:0; padding:0; font-size:8px">{{rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)}}</small>
                     </div>
-                    <strong>Order ID</strong> 1 <br>
+                    <strong>Order ID</strong> {{$shipment->id}} <br>
                     <strong>Payment Status</strong> Paid <br>
-                    <strong>Shipment Insurance</strong> $0.0
+                    <strong>Shipment Insurance</strong> ${{$shipment->insurance}}
                 </td>
             </tr>
         </table><br>
         <table class="table table-sm">
             <thead>
                 <tr>
+                    <th>Qty</th>
                     <th>Product</th>
                     <th>Status</th>
                     <th>Price</th>
@@ -72,10 +73,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>some name here</td>
-                    <td>InTransit</td>
-                    <td>$2000</td>
-                    <td>$4000</td>
+                    <td>{{$shipment->quantity}}</td>
+                    <td>{{$shipment->description}}</td>
+                    <td>{{$shipment->status}}</td>
+                    <td>${{$shipment->price}}</td>
+                    <td>${{$shipment->price * $shipment->quantity}}</td>
                 </tr>
             </tbody>
         </table>
