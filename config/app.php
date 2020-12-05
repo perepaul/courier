@@ -16,7 +16,7 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
 
     'phone' => env('APP_PHONE','+13064009095'),
-    'email' => env('APP_EMAIL','contact@firstexpressservice.com'),
+    'email' => env('APP_EMAIL','contact@overseaslinkexpress.com'),
     'address' => env('APP_ADDRESS','316 Main St, Kindersley, SK S0L 1S0, Canada.'),
 
     /*

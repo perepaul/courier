@@ -31,12 +31,8 @@ class NotifyUserMailable extends Mailable
     {
         $pdf = app()->make('dompdf.wrapper');
         $pdf->loadView('receipt.receipt',['shipment'=>$this->shipment]);
-        $path = public_path('uploads/receipts/').now()->timestamp.rand(3*34323,3832*50393).'.pdf';
-        $pdf->save($path);
-        $content = file_get_contents($path);
-        @unlink($path);
         // dd('here');
         return $this->markdown('emails.notify-user')->subject('Parcel Dispatched')
-                ->attachData($content,'Receipt.pdf',['mime' => 'application/pdf',]);
+                ->attachData($pdf->output(),'Receipt.pdf',['mime' => 'application/pdf',]);
     }
 }
