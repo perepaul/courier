@@ -61,7 +61,7 @@
                             <div class="file-field input-field">
                                 <div class="btn">
                                     <span>File</span>
-                                    <input type="file" name="image" class="@error('from_address') error @enderror">
+                                    <input type="file" name="image" class="@error('image') error @enderror">
                                 </div>
                                 <div class="file-path-wrapper">
                                     <input class="file-path validate" type="text" placeholder="Upload one or more files">
@@ -71,6 +71,17 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col s12 m6 l12">
+                        <div class="input-field">
+                                <input id="from_name" type="text" name="from_name" class="@error('from_name') error @enderror">
+                                <label for="from_name">Sender name</label>
+                                @error('from_name')
+                                    <div class="errorTxt4"><div id="cpassword-error" class="error">{{$message}}</div></div>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="col s12">
                             <div class="input-field">
                                 <input id="com2" type="text" class="@error('from_address') error @enderror" name="from_address">

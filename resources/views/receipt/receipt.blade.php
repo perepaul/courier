@@ -37,7 +37,7 @@
             <tr class="w-100">
                 <td class="col-md-4 p-0 m-0 p-1">
                     From <br>
-                    <strong>Edwin Stefan</strong> <br>
+                    <strong>{{$shipment->from_name}}</strong> <br>
                     <strong>Phone:</strong> {{config('app.phone')}} <br>
                     <strong>Address:</strong> {{config('app.address')}} <br>
     

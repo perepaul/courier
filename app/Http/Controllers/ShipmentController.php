@@ -51,7 +51,8 @@ class ShipmentController extends Controller
             'description' => 'required',
             'insurance' => 'required|numeric',
             'quantity' => 'required|numeric',
-            'price' => 'required|numeric'
+            'price' => 'required|numeric',
+            'from_name' => 'required|string'
         ]);
         // dd($request->all());
         $shipment =  new shipment($request->except('_token','image'));
