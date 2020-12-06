@@ -39,7 +39,7 @@
                     From <br>
                     <strong>{{$shipment->from_name}}</strong> <br>
                     <strong>Phone:</strong> {{config('app.phone')}} <br>
-                    <strong>Address:</strong> {{config('app.address')}} <br>
+                    <strong>Address:</strong> {{$shipment->from_address}} <br>
     
                 </td>
                 <td class="col-md-4 p-0 m-0 p-1">
