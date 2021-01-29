@@ -3,7 +3,7 @@
     
 <!-- Mirrored from event-theme.com/themes/GO-Courier/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2020 12:51:42 GMT -->
 <head>
-        <title>Oversea Link Delivery</title>
+        <title>Top Hill Delivery Express</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -78,7 +78,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-logo" href="{{url('/')}}">
-                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">OLE<small class="fs-12">xpress</small></h5>
+                            <h5 class=" pt-5 pb-10 effect animated fadeInLeft logo-text">THDE<small class="fs-12"></small></h5>
 
                             <!-- <img src="{{asset('uploads/front/logo/logo-2.png')}}" alt="logo" />  -->
                         </a>
@@ -158,7 +158,7 @@
             <div class="theme-container container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p> Overseas Link Express Inc., © {{date('Y')}}, All rights reserved </p>
+                        <p> Top Hill Delivery Express, © {{date('Y')}}, All rights reserved </p>
                     </div>
                    
                 </div>
@@ -178,7 +178,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
 
             @if($errors->any())
-            dd($errors->all());
+            {{-- dd($errors->all()); --}}
                 @foreach($errors->all() as $error)
                     <script>
                         iziToast.error({
