@@ -115,7 +115,7 @@ class ShipmentController extends Controller
             $track->save();
             return response()->json('updated sucessfully',201);
         }catch(\Throwable $err){
-            \Log::error($err);
+            Log::error($err);
             return response()->json([],400);
         }
     }
@@ -127,7 +127,7 @@ class ShipmentController extends Controller
         return view('front.tracking',compact('shipment'));
     }
 
-    
+
 
     /**
      * Show the form for editing the specified resource.
