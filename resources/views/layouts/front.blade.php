@@ -3,7 +3,7 @@
 
 <!-- Mirrored from event-theme.com/themes/GO-Courier/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2020 12:51:42 GMT -->
 <head>
-        <title>Exxon Courier</title>
+        <title>Redline Courier</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -158,7 +158,7 @@
             <div class="theme-container container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p> Exxon Courier, © {{date('Y')}}, All rights reserved </p>
+                        <p> Redline Courier, © {{date('Y')}}, All rights reserved </p>
                     </div>
 
                 </div>
