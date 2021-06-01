@@ -6788,7 +6788,7 @@ a:hover,
 }
 
 .contact-detail span {
-    width: 31%;
+    /* width: 31%; */
     display: inline-block;
 }
 
@@ -6796,7 +6796,7 @@ a:hover,
     margin: 35px 0 0;
 }
 
-.contact-detail>li {
+  .contact-detail>li {
     padding-top: 17px;
 }
 
@@ -6805,7 +6805,7 @@ a:hover,
 }
 
 .contact-2 .contact-detail span {
-    width: 35%;
+    /* width: 35%; */
 }
 
 .contact-2 .contact-detail p {
