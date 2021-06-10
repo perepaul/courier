@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('uploads/images/favicon.png')}}">
-    <title>Materialart Admin Template</title>
+    <title>Redline</title>
     <link href="{{asset('css/admin/app.css')}}" rel="stylesheet">
 
     @yield('css')
-  
+
     <!-- This page CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +28,7 @@
         <div class="preloader">
             <div class="loader">
                 <div class="loader__figure"></div>
-                <p class="loader__label">Material Admin</p>
+                <p class="loader__label">Redline</p>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -51,7 +51,7 @@
             <!-- ============================================================== -->
             <div class="page-titles">
                 <div class="d-flex align-items-center">
-                    <h5 class="font-medium m-b-0">Starter Page</h5>
+                    <h5 class="font-medium m-b-0">Welcom Admin</h5>
                     <div class="custom-breadcrumb ml-auto">
                         <a href="#!" class="breadcrumb">Home</a>
                         <a href="#!" class="breadcrumb">Starter Page</a>
@@ -411,7 +411,7 @@
     @yield('js')
 
     <!-- <script src="{{ asset('js/admin/app.js') }}"></script> -->
-    
+
 </body>
 
 </html>
