@@ -51,7 +51,7 @@
             <!-- ============================================================== -->
             <div class="page-titles">
                 <div class="d-flex align-items-center">
-                    <h5 class="font-medium m-b-0">Welcom Admin</h5>
+                    <h5 class="font-medium m-b-0">Welcome Admin</h5>
                     <div class="custom-breadcrumb ml-auto">
                         <a href="#!" class="breadcrumb">Home</a>
                         <a href="#!" class="breadcrumb">Starter Page</a>
