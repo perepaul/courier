@@ -14,7 +14,7 @@
                     <li><a href="#">worldwide</a></li>
                 </ul>
                 <h4 class="section-title effect animated wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">
-                    <span class="fs-36">Redline Courier SERVICES. </span> <br> <span class="theme-clr fs-16"> courier &
+                    <span class="fs-36">Globatex Courier SERVICES. </span> <br> <span class="theme-clr fs-16"> courier &
                         Diplomatic delivery services</span> </h4>
                 <div class="pad-30"></div>
                 <div class="col-md-8 col-md-offset-2 tracking-form text-left effect animated fadeInUp">
@@ -87,10 +87,10 @@
                             <h2 class="section-title pb-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> About
                                 Us </h2>
                             <p class="fs-16 wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s">
-                                Redline Courier services, is a USA integrated shipping company, active in ocean and inland
+                                Globatex Courier services, is a USA integrated shipping company, active in ocean and inland
                                 freight transportation and associated with a Diplomatic Delivery Services, such as supply
                                 chain management and port operation. We have large container ships
-                                and supply vessel operators in the world since 1996. Redline Courier Services operates over 786
+                                and supply vessel operators in the world since 1996. Globatex Courier Services operates over 786
                                 vessels and has a capacity of 4.1 million TEU. The company was founded in 1966.
                                 Our Line operates over 786 vessels and has a capacity of 4.1 million TEU. The company was
                                 founded in 1966. <br>

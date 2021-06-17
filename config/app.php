@@ -16,7 +16,7 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
 
     'phone' => env('APP_PHONE','+13064009095'),
-    'email' => env('APP_EMAIL','support@redlinecourieronline.com'),
+    'email' => env('APP_EMAIL','support@globatexcourier.com'),
     'address' => env('APP_ADDRESS','995  Todds Lane, San Antonio, Texas, USA.'),
 
     /*

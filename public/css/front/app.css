@@ -8128,7 +8128,7 @@ a:hover,
     /*---- Contact us Starts ---*/
     .contact-detail span,
     .contact-2 .contact-detail span {
-        width: 50%;
+        /* width: 50%; */
     }
     .contact-detail p,
     .contact-2 .contact-detail p {
