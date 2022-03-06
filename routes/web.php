@@ -3,6 +3,7 @@
 use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShipmentController;
+use App\Models\shipment;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,8 +43,10 @@ Route::middleware('auth:sanctum')->group(function() {
         return redirect()->to('/');
     })->name('logout');
     Route::get('admin',function() {
-        return view('admin.index');
-    });
+        $shipments = shipment::all();
+        // dd($shipments);
+        return view('admin.index',compact('shipments'));
+    })->name('admin.index');
     Route::resource('shipment',ShipmentController::class);
     Route::post('shipment/{id}/update-status',[ShipmentController::class,'updateStatus'])->name('shipment.update-status');
     Route::get('track/{id}/update-address',[ShipmentController::class,'editTrackAddress'])->name('track.update-address');

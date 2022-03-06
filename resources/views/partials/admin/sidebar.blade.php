@@ -3,7 +3,7 @@
         <li>
             <ul class="collapsible p-t-30">
                 <li>
-                    <a href="index.html" class="collapsible-header"><i class="material-icons">dashboard</i><span class="hide-menu">Dashboard</span></a>
+                    <a href="{{route('admin.index')}}" class="collapsible-header"><i class="material-icons">dashboard</i><span class="hide-menu">Dashboard</span></a>
                 </li>
                 <li>
                     <a href="{{route('shipment.index')}}" class="collapsible-header"><i class="material-icons">directions_car</i><span class="hide-menu">Shipments</span></a>

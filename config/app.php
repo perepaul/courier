@@ -15,9 +15,9 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'phone' => env('APP_PHONE','+13064009095'),
-    'email' => env('APP_EMAIL','contact@exxoncourier.com'),
-    'address' => env('APP_ADDRESS','316 Main St, Kindersley, SK S0L 1S0, Canada.'),
+    'phone' => env('APP_PHONE', '+13064009095'),
+    'email' => env('APP_EMAIL', 'contact@exxoncourier.com'),
+    'address' => env('APP_ADDRESS', '316 Main St, Kindersley, SK S0L 1S0, Canada.'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
-    'package_dir'=>'uploads/package-images/',
+    'package_dir' => 'uploads/package-images/',
 
     /*
     |--------------------------------------------------------------------------
