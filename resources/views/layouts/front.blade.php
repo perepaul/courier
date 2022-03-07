@@ -4,7 +4,7 @@
     <!-- Mirrored from event-theme.com/themes/GO-Courier/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2020 12:51:42 GMT -->
 
     <head>
-        <title>Redline Courier</title>
+        <title>{{config('app.name')}}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
