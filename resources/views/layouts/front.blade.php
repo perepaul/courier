@@ -194,16 +194,16 @@
                             </div>
                             <nav class="Navbar__Items Navbar__Items--right">
                                 <div class="Navbar__Link">
-                                    <a href="">Home</a>
+                                    <a href="#home">Home</a>
                                 </div>
                                 <div class="Navbar__Link">
-                                    <a href="">About</a>
+                                    <a href="#about-us">About</a>
                                 </div>
                                 <div class="Navbar__Link">
-                                    <a href="">Testimonials</a>
+                                    <a href="#testimonials">Testimonials</a>
                                 </div>
                                 <div class="Navbar__Link">
-                                    <a href="">Contact</a>
+                                    <a href="#contact-us">Contact</a>
                                 </div>
                             </nav>
                         </div>
