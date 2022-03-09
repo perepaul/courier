@@ -1,20 +1,20 @@
 @extends('layouts.front')
 @section('content')
 <article>
-<section class="banner banner-style2 mask-overlay pt-120 white-clr">
-    <div class="pad-30 hidden-xs"></div>
-    <div class="container theme-container rel-div pb-15">
-        <!-- <img class="pt-10 effect animated fadeInLeft" alt="" src="{{asset('uploads/front/icons/icon-1.png')}}" /> -->
-        
-        <h2 class="section-title fs-48 effect animated wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">
-            Trac<span class="theme-clr">king </span> 
-        </h2>
-    <div class="pad-50 hidden-xs">&nbsp;</div>
+    <section class="banner banner-style2 mask-overlay pt-120 white-clr">
+        <div class="pad-30 hidden-xs"></div>
+        <div class="container theme-container rel-div pb-15">
+            <!-- <img class="pt-10 effect animated fadeInLeft" alt="" src="{{asset('uploads/front/icons/icon-1.png')}}" /> -->
 
-    </div>
-</section>
-        <!-- Breadcrumb -->
-        <!-- <section class="theme-breadcrumb pad-50">
+            <h2 class="section-title fs-48 effect animated wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">
+                Trac<span class="theme-clr">king </span>
+            </h2>
+            <div class="pad-50 hidden-xs">&nbsp;</div>
+
+        </div>
+    </section>
+    <!-- Breadcrumb -->
+    <!-- <section class="theme-breadcrumb pad-50">
             <div class="theme-container container ">
                 <div class="row">
                     <div class="col-sm-8 pull-left">
@@ -32,52 +32,54 @@
                 </div>
             </div>
         </section> -->
-        <!-- /.Breadcrumb -->
+    <!-- /.Breadcrumb -->
 
-        <!-- Tracking -->
-        <section class="pt-50 pb-120 tracking-wrap">
-            <div class="theme-container container ">
-                <div class="row pad-10">
-                    <div class="col-md-8 col-md-offset-2 tracking-form wow fadeInUp" data-wow-offset="50" data-wow-delay=".30s">
-                        <h2 class="title-1"> track your product </h2> <span class="font2-light fs-12">Now you can track your product easily</span>
-                        <div class="row">
-                            <form action="{{route('shipment.tracking')}}" method="post" >
-                                @csrf
-                                <div class="col-md-7 col-sm-7">
-                                    <div class="form-group">
-                                        <input type="text" name="code" placeholder="Enter your product ID" required="" class="form-control box-shadow">
-                                    </div>
+    <!-- Tracking -->
+    <section class="pt-50 pb-120 tracking-wrap">
+        <div class="theme-container container ">
+            <div class="row pad-10">
+                <div class="col-md-8 col-md-offset-2 tracking-form wow fadeInUp" data-wow-offset="50" data-wow-delay=".30s">
+                    <h2 class="title-1"> track your product </h2> <span class="font2-light fs-12">Now you can track your product easily</span>
+                    <div class="row">
+                        <form action="{{route('shipment.tracking')}}" method="post">
+                            @csrf
+                            <div class="col-md-7 col-sm-7">
+                                <div class="form-group">
+                                    <input type="text" name="code" placeholder="Enter your product ID" required="" class="form-control box-shadow">
                                 </div>
-                                <div class="col-md-5 col-sm-5">
-                                    <div class="form-group">
-                                        <button class="btn-1">track your product</button>
-                                    </div>
+                            </div>
+                            <div class="col-md-5 col-sm-5">
+                                <div class="form-group">
+                                    <button class="btn-1">track your product</button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                @isset($shipment)
-                <div class="row">
-                    <div class="col-md-7 pad-30 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".30s">
-                        <img alt="" src="{{asset(config('app.package_dir').'/'.$shipment->image)}}" />
-                    </div>
-                    <div class="col-md-5 pad-30 wow fadeInRight" data-wow-offset="50" data-wow-delay=".30s">
-                        <div class="prod-info white-clr">
-                            <ul>
-                                <li> <span class="title-2">Recipient:</span> <span class="fs-16">{{$shipment->name}}</span> </li>
-                                <li> <span class="title-2">Tracking code:</span> <span class="fs-16">{{$shipment->code}}</span> </li>
-                                <li> <span class="title-2">Parcel:</span> <span class="fs-16">{{$shipment->description}}</span> </li>
-                                <li> <span class="title-2">order date:</span> <span class="fs-16">{{$shipment->created_at}}</span> </li>
-                                <li> <span class="title-2">order status:</span> <span class="fs-16 theme-clr">{{$shipment->status}}</span> </li>
-                                <!-- <li> <span class="title-2">weight (kg):</span> <span class="fs-16">0.85 KG</span> </li>
+            </div>
+            @isset($shipment)
+            <div class="row">
+                <div class="col-md-7 pad-30 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".30s">
+                    <img alt="" src="{{asset(config('app.package_dir').'/'.$shipment->image)}}" />
+                </div>
+                <div class="col-md-5 pad-30 wow fadeInRight" data-wow-offset="50" data-wow-delay=".30s">
+                    <div class="prod-info white-clr">
+                        <ul>
+                            <li> <span class="title-2">Sender:</span> <span class="fs-16">{{$shipment->from_name}}</span> </li>
+                            <li> <span class="title-2">Recipient:</span> <span class="fs-16">{{$shipment->name}}</span> </li>
+                            <li> <span class="title-2">Tracking code:</span> <span class="fs-16">{{$shipment->code}}</span> </li>
+                            <li> <span class="title-2">Parcel:</span> <span class="fs-16">{{$shipment->description}}</span> </li>
+                            <li> <span class="title-2">order date:</span> <span class="fs-16">{{$shipment->created_at}}</span> </li>
+                            <li> <span class="title-2">order status:</span> <span class="fs-16 theme-clr">{{$shipment->status}}</span> </li>
+                            <li> <span class="title-2">Estimated Delivery Date:</span> <span class="fs-16">{{$shipment->delivered_at->format('d m, Y')}}</span> </li>
+                            <!-- <li> <span class="title-2">weight (kg):</span> <span class="fs-16">0.85 KG</span> </li>
                                 <li> <span class="title-2">order type:</span> <span class="fs-16">Basic ($50)</span> </li> -->
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
-                <hr>
-                <!-- <div class="progress-wrap">
+            </div>
+            <hr>
+            <!-- <div class="progress-wrap">
                     <div class="progress-status">
                         <span class="border-left"></span>
                         <span class="border-right"></span>
@@ -106,8 +108,8 @@
                         </div>
                     </div>
                 </div> -->
-               
-                <center>
+
+            <center>
                 <div>
                     <h2 class="title-6">{{$shipment->from_address}}</h2>
                 </div>
@@ -126,7 +128,7 @@
                     <h2 class="title-1">{{$tracks->address}}</h2>
                 </div>
                 @endif
-                
+
                 @endforeach
                 <div class="border-left"></div>
                 <div class="">
@@ -134,18 +136,18 @@
                     <small>[ Destination ]</small>
                 </div>
 
-                </center>
-    
-                @else
-                <div class="container">
-                    <div class="alert alert-danger pad-30" role="alert">
-                        <p>We were unable to find your package!</p>
-                    </div>
-                </div>
-                @endisset
-            </div>
-        </section>
-        <!-- /.Tracking -->
+            </center>
 
-    </article>
+            @else
+            <div class="container">
+                <div class="alert alert-danger pad-30" role="alert">
+                    <p>We were unable to find your package!</p>
+                </div>
+            </div>
+            @endisset
+        </div>
+    </section>
+    <!-- /.Tracking -->
+
+</article>
 @endsection

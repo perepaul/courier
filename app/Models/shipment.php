@@ -11,7 +11,8 @@ class shipment extends Model
     protected $guarded = ['id'];
 
     protected $casts = [
-        'tracks'=>'object'
+        'tracks' => 'object',
+        'delivered_at' => 'date',
     ];
 
     public function tracks()
@@ -21,7 +22,7 @@ class shipment extends Model
 
     public function getStatusAttribute($value)
     {
-        switch($value){
+        switch ($value) {
             case 1:
                 return 'Pending';
             case 2:

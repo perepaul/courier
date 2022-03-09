@@ -20,7 +20,7 @@ class ShipmentController extends Controller
     public function index()
     {
         $shipments = shipment::paginate(10);
-        return view('admin.shipment.index',compact('shipments'));
+        return view('admin.shipment.index', compact('shipments'));
     }
 
     /**
@@ -42,27 +42,28 @@ class ShipmentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required|string',
-            'phone'=>'required|string',
-            'address'=>'required|string',
-            'email'=>'required|string',
+            'name' => 'required|string',
+            'phone' => 'required|string',
+            'address' => 'required|string',
+            'email' => 'required|string',
             'image' => 'required|image|mimes:jpg,jpeg,png',
             'from_address' => 'required',
             'description' => 'required',
             'insurance' => 'required|numeric',
             'quantity' => 'required|numeric',
             'price' => 'required|numeric',
-            'from_name' => 'required|string'
+            'from_name' => 'required|string',
+            'created_at' => 'nullable|date',
+            'delivered_at' => 'required|date',
         ]);
         // dd($request->all());
-        $shipment =  new shipment($request->except('_token','image'));
-        if($request->hasFile('image'))
-        {
-            $filename = now().'.'.$request->image->extension();
-            $request->image->move(public_path(config('app.package_dir')),$filename);
+        $shipment =  new shipment($request->except('_token', 'image'));
+        if ($request->hasFile('image')) {
+            $filename = now() . '.' . $request->image->extension();
+            $request->image->move(public_path(config('app.package_dir')), $filename);
             $shipment->image = $filename;
         }
-        $shipment->code = Str::limit(uniqid(rand(10*45,80*75), true),15,'');
+        $shipment->code = Str::limit(uniqid(rand(10 * 45, 80 * 75), true), 15, '');
         $shipment->save();
         try {
             Mail::to($shipment->email)->send(new NotifyUserMailable($shipment));
@@ -80,10 +81,10 @@ class ShipmentController extends Controller
      */
     public function show(shipment $shipment)
     {
-        return view('admin.shipment.add-tracks',compact('shipment'));
+        return view('admin.shipment.add-tracks', compact('shipment'));
     }
 
-     /**
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -93,38 +94,38 @@ class ShipmentController extends Controller
 
     public function updateStatus(Request $request, $id)
     {
-         $shipment = shipment::findOrFail($id);
-         if($request->has('address') && !is_null($request->address)){
-             $tracks = new tracks($request->except('_token','status'));
-             $shipment->tracks()->save($tracks);
-         }
-         if($request->has('status') && !is_null($request->status)){
+        $shipment = shipment::findOrFail($id);
+        if ($request->has('address') && !is_null($request->address)) {
+            $tracks = new tracks($request->except('_token', 'status'));
+            $shipment->tracks()->save($tracks);
+        }
+        if ($request->has('status') && !is_null($request->status)) {
             // dd('here');
-             $shipment->status = $request->status;
+            $shipment->status = $request->status;
             //  dd($shipment->status);
-             $shipment->save();
-         }
-         return redirect()->back();
+            $shipment->save();
+        }
+        return redirect()->back();
     }
 
     public function editTrackAddress(Request $request, $id)
     {
-        try{
+        try {
             $track = tracks::findOrFail($id);
             $track->address = $request->input('address');
             $track->save();
-            return response()->json('updated sucessfully',201);
-        }catch(\Throwable $err){
+            return response()->json('updated sucessfully', 201);
+        } catch (\Throwable $err) {
             Log::error($err);
-            return response()->json([],400);
+            return response()->json([], 400);
         }
     }
 
     public function tracking(Request $request)
     {
-        $shipment = shipment::where('code',$request->code)->first() ?? null;
+        $shipment = shipment::where('code', $request->code)->first() ?? null;
         // dd($request->all());
-        return view('front.tracking',compact('shipment'));
+        return view('front.tracking', compact('shipment'));
     }
 
 
@@ -137,7 +138,7 @@ class ShipmentController extends Controller
      */
     public function edit(shipment $shipment)
     {
-        return view('admin.shipment.edit',compact('shipment'));
+        return view('admin.shipment.edit', compact('shipment'));
     }
 
     /**
@@ -150,7 +151,7 @@ class ShipmentController extends Controller
     public function update(Request $request, shipment $shipment)
     {
         $shipment->update($request->except('_token'));
-        return redirect()->route('shipment.show',$shipment->id);
+        return redirect()->route('shipment.show', $shipment->id);
     }
 
     /**
@@ -162,7 +163,7 @@ class ShipmentController extends Controller
     public function destroy(shipment $shipment)
     {
         $shipment->tracks()->delete();
-        @unlink(public_path(config('app.package_dir').$shipment->image));
+        @unlink(public_path(config('app.package_dir') . $shipment->image));
         $shipment->delete();
         session()->flash('message', 'Shipment deleted');
         return redirect()->route('shipment.index');
