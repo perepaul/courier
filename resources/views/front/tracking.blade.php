@@ -69,9 +69,9 @@
                             <li> <span class="title-2">Recipient:</span> <span class="fs-16">{{$shipment->name}}</span> </li>
                             <li> <span class="title-2">Tracking code:</span> <span class="fs-16">{{$shipment->code}}</span> </li>
                             <li> <span class="title-2">Parcel:</span> <span class="fs-16">{{$shipment->description}}</span> </li>
-                            <li> <span class="title-2">order date:</span> <span class="fs-16">{{$shipment->created_at}}</span> </li>
+                            <li> <span class="title-2">order date:</span> <span class="fs-16">{{$shipment?->created_at}}</span> </li>
                             <li> <span class="title-2">order status:</span> <span class="fs-16 theme-clr">{{$shipment->status}}</span> </li>
-                            <li> <span class="title-2">Estimated Delivery Date:</span> <span class="fs-16">{{$shipment->delivered_at->format('d m, Y')}}</span> </li>
+                            <li> <span class="title-2">Estimated Delivery Date:</span> <span class="fs-16">{{$shipment->delivered_at?->format('d m, Y')}}</span> </li>
                             <!-- <li> <span class="title-2">weight (kg):</span> <span class="fs-16">0.85 KG</span> </li>
                                 <li> <span class="title-2">order type:</span> <span class="fs-16">Basic ($50)</span> </li> -->
                         </ul>
