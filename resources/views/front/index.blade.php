@@ -18,20 +18,20 @@
                     Diplomatic delivery services</span>
             </h4>
             <div class="pad-30"></div>
-            <div class="col-md-8 col-md-offset-2 tracking-form text-left effect animated fadeInUp">
-                <h2 class="title-1"> track your product </h2> <span class="font2-light fs-12">Now you can track your
-                    product easily</span>
+            <div class="text-left col-md-8 col-md-offset-2 tracking-form effect animated fadeInUp">
+                <h2 class="title-1"> track your package </h2> <span class="font2-light fs-12">Now you can track your
+                    package easily</span>
                 <div class="row">
                     <form method="POST" action="{{ route('shipment.tracking') }}">
                         @csrf
                         <div class="col-md-7 col-sm-7">
                             <div class="form-group">
-                                <input type="text" name="code" class="form-control box-shadow" required="" placeholder="Enter your product ID">
+                                <input type="text" name="code" class="form-control box-shadow" required="" placeholder="Enter your package ID">
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-5">
                             <div class="form-group">
-                                <button class="btn-1">track your product</button>
+                                <button class="btn-1">track your package</button>
                             </div>
                         </div>
                     </form>
@@ -44,7 +44,7 @@
 
     <!-- Feature-2 -->
     <section class="pad-50 feature feature-2 clrbg-before">
-        <div class="theme-container container">
+        <div class="container theme-container">
             <div class="row">
                 <div class="col-sm-4">
                     <img alt="" src="{{ asset('uploads/front/icons/icon-2.png') }}" class="wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s" />
@@ -76,12 +76,12 @@
     <span id="about-us"></span>
     <section class="pad-120 about-wrap about-2 clrbg-before">
         <span class="bg-text wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> About </span>
-        <div class="theme-container container">
+        <div class="container theme-container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="pt-80 visible-lg"></div>
                     <div class="about-us">
-                        <h2 class="section-title pb-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> About
+                        <h2 class="pb-10 section-title wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> About
                             Us </h2>
                         <p class="fs-16 wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s">
                             {{config('app.name')}}, is a USA integrated shipping company, active in ocean and inland
@@ -100,19 +100,19 @@
                             Peters E. Casey.</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="text-center col-md-6">
                     <img alt="" src="{{ asset('uploads/front/block/about-img.png') }}" class="wow slideInRight" data-wow-offset="50" data-wow-delay=".20s" />
                 </div>
                 <div class="row col-md-12">
-                    <div class="col-md-6 border wow slideLeft" data-wow-offset="50" data-wow-delay=".20s">
+                    <div class="border col-md-6 wow slideLeft" data-wow-offset="50" data-wow-delay=".20s">
                         <h3 class="fs-16 wow fadeInUp text-dark"> Our Mission </h3>
                         <p>Our aim is to act as an indispensable partner to our clients by helping them build and
-                            maximize sustainable competitive advantages. We do this by helping them get their products
+                            maximize sustainable competitive advantages. We do this by helping them get their packages
                             to market quickly, efficiently, and safely. In addition to our expertly crafted and reliably
                             delivered logistics solutions, our clients can rest assured that every interaction will be
                             driven by integrity and respect, the fundamental principles of our business.</p>
                     </div>
-                    <div class="col-md-6 border wow bounceUp" data-wow-offset="50" data-wow-delay=".20s">
+                    <div class="border col-md-6 wow bounceUp" data-wow-offset="50" data-wow-delay=".20s">
                         <h3 class="fs-16 wow fadeInUp text-dark"> Our Goal </h3>
 
                         <p>Our mission is to deliver a positive, reliable experience to each and every one of our
@@ -123,7 +123,7 @@
                             for our clients and our employees, for whom our goal is to provide a safe and secure work
                             environment. </p>
                     </div>
-                    <!-- <div class="col-md-4 border wow fadeInDown" data-wow-offset="50" data-wow-delay=".20s">
+                    <!-- <div class="border col-md-4 wow fadeInDown" data-wow-offset="50" data-wow-delay=".20s">
                                 <h3 class="fs-16 wow fadeInUp text-dark"> About </h3>
                             </div> -->
                 </div>
@@ -134,7 +134,7 @@
 
     <!-- Steps -->
     <section class="steps-wrap mask-overlay pad-80">
-        <div class="theme-container container">
+        <div class="container theme-container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="font-2 fs-50 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s"> 1. </div>
@@ -166,15 +166,15 @@
 
     <!-- Calculate Your Cost -->
     <section class="calculate pt-100">
-        <div class="theme-container container">
+        <div class="container theme-container">
             <span class="bg-text right wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> calculate </span>
             <div class="row">
-                <div class="col-md-6 text-center">
+                <div class="text-center col-md-6">
                     <img src="{{ asset('uploads/front/block/Courier-Man.png') }}" alt="" class="wow slideInLeft" data-wow-offset="50" data-wow-delay=".20s" />
                 </div>
                 <div class="col-md-6">
                     <div class="pad-10"></div>
-                    <h2 class="section-title pb-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> calculate
+                    <h2 class="pb-10 section-title wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> calculate
                         your cost </h2>
                     <p class="fs-16 wow fadeInUp" data-wow-offset="50" data-wow-delay=".25s">
                         Our pricing estimator for senders. Fill out the form below and get an estimated delivery charge
@@ -242,7 +242,7 @@
     <!-- Testimonial -->
     <span id="testimonials"></span>
     <section class="testimonial mask-overlay">
-        <div class="theme-container container">
+        <div class="container theme-container">
             <div class="testimonial-slider no-pagination pad-120">
                 <div class="item">
                     <div class="testimonial-img darkclr-border theme-clr font-2 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">
@@ -261,7 +261,7 @@
                                 I received it in less than 48 hours. expensive but fast and 100% relaible. Better than
                                 anyone. Highly recommended!
                             </i> </p>
-                        <h2 class="title-2 pt-10 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> <a href="#" class="white-clr fw-900"> Riaz Hussain </a> </h2>
+                        <h2 class="pt-10 title-2 wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> <a href="#" class="white-clr fw-900"> Riaz Hussain </a> </h2>
                     </div>
                 </div>
                 <div class="item">
@@ -275,7 +275,7 @@
                                 recently,<br>
                                 but these guys made me believe the opposite still exists! :) Great service. <br>Thanks!
                             </i> </p>
-                        <h2 class="title-2 pt-10"> <a href="#" class="white-clr fw-900"> Berty van Hensbergen </a> </h2>
+                        <h2 class="pt-10 title-2"> <a href="#" class="white-clr fw-900"> Berty van Hensbergen </a> </h2>
                     </div>
                 </div>
                 <div class="item">
@@ -291,7 +291,7 @@
                                 luptatum zzril delenit
                                 <br> augue duis dolore te feugait nulla facilisi.
                             </i> </p>
-                        <h2 class="title-2 pt-10"> <a href="#" class="white-clr fw-900"> Bushra Ahsani </a> </h2>
+                        <h2 class="pt-10 title-2"> <a href="#" class="white-clr fw-900"> Bushra Ahsani </a> </h2>
                     </div>
                 </div>
             </div>
@@ -299,9 +299,9 @@
     </section>
     <!-- /.Testimonial -->
 
-    <!-- Product Delivery -->
+    <!-- Package Delivery -->
     <section class="prod-delivery pad-120">
-        <div class="theme-container container">
+        <div class="container theme-container">
             <div class="row">
                 <div class="col-md-11 col-md-offset-1">
                     <div class="pt-120 rel-div">
@@ -314,87 +314,87 @@
                             your package gets to your recipient.</p>
                         <div class="pb-120 hidden-xs"></div>
                     </div>
-                    <div class="delivery-img pt-10">
+                    <div class="pt-10 delivery-img">
                         <img alt="" src="{{ asset('uploads/front/block/output-1-removebg-preview.png') }}" class="wow slideInLeft" data-wow-offset="50" data-wow-delay=".20s" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- /.Product Delivery -->
+    <!-- /.Package Delivery -->
 
     <!-- Pricing & Plans -->
-    <!-- <section class="pricing-wrap  pricing-2">
-                        <div class="theme-container container">
+    <!-- <section class="pricing-wrap pricing-2">
+                        <div class="container theme-container">
                             <span class="bg-text center wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"> Pricing </span>
-                            <div class="title-wrap text-center  pb-50">
+                            <div class="text-center title-wrap pb-50">
                                 <h2 class="section-title wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">Pricing & plans</h2>
                                 <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s">See our pricing & plans to get best service</p>
                             </div>
                             <div class="row">
                                 <div class="col-md-4 wow slideInUp" data-wow-offset="50" data-wow-delay=".20s">
-                                    <div class="pricing-box clrbg-before clrbg-after transition">
-                                        <div class="block-inline text-center">
+                                    <div class="transition pricing-box clrbg-before clrbg-after">
+                                        <div class="text-center block-inline">
                                             <div class="pad-10"></div>
                                             <h3 class="title-2"> Basic </h3>
                                             <h2 class="section-title fs-36">$50</h2>
-                                            <p>for single product</p>
+                                            <p>for single Package</p>
                                         </div>
                                         <div class="price-content-2">
                                             <ul class="title-2">
-                                                <li> Product Weight: <span class="gray-clr">&LT; 3kg</span> </li>
+                                                <li> Package Weight: <span class="gray-clr">&LT; 3kg</span> </li>
                                                 <li> Country: <span class="gray-clr">  all</span> </li>
                                                 <li> duration: <span class="gray-clr">7-14 days</span> </li>
                                                 <li> support: <span class="gray-clr">yes</span> </li>
                                             </ul>
                                         </div>
-                                        <div class="text-center order-2">
+                                        <div class="order-2 text-center">
                                             <a href="#" class="btn-round"> order now </a>
                                         </div>
-                                        <div class="pricing-hover clrbg-before clrbg-after transition"></div>
+                                        <div class="transition pricing-hover clrbg-before clrbg-after"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 wow slideInUp" data-wow-offset="50" data-wow-delay=".30s">
                                     <div class="pricing-box active">
-                                        <div class="block-inline text-center">
+                                        <div class="text-center block-inline">
                                             <div class="pad-10"></div>
                                             <h3 class="title-2"> Premium </h3>
                                             <h2 class="section-title fs-36">$250</h2>
-                                            <p>for package product</p>
+                                            <p>for package</p>
                                         </div>
                                         <div class="price-content-2">
                                             <ul class="title-2">
-                                                <li> Product Weight: <span class="gray-clr">&LT; 3kg</span> </li>
+                                                <li> Package Weight: <span class="gray-clr">&LT; 3kg</span> </li>
                                                 <li> Country: <span class="gray-clr">  all</span> </li>
                                                 <li> duration: <span class="gray-clr">7-14 days</span> </li>
                                                 <li> support: <span class="gray-clr">yes</span> </li>
                                             </ul>
                                         </div>
-                                        <div class="text-center order-2">
+                                        <div class="order-2 text-center">
                                             <a href="#" class="btn-round"> order now </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 wow slideInUp" data-wow-offset="50" data-wow-delay=".40s">
-                                    <div class="pricing-box clrbg-before clrbg-after transition">
-                                        <div class="block-inline text-center">
+                                    <div class="transition pricing-box clrbg-before clrbg-after">
+                                        <div class="text-center block-inline">
                                             <div class="pad-10"></div>
                                             <h3 class="title-2"> standard </h3>
                                             <h2 class="section-title fs-36">$150</h2>
-                                            <p>for multiple product</p>
+                                            <p>for multiple packages</p>
                                         </div>
                                         <div class="price-content-2">
                                             <ul class="title-2">
-                                                <li> Product Weight: <span class="gray-clr">&LT; 3kg</span> </li>
+                                                <li> Package Weight: <span class="gray-clr">&LT; 3kg</span> </li>
                                                 <li> Country: <span class="gray-clr">  all</span> </li>
                                                 <li> duration: <span class="gray-clr">7-14 days</span> </li>
                                                 <li> support: <span class="gray-clr">yes</span> </li>
                                             </ul>
                                         </div>
-                                        <div class="text-center order-2">
+                                        <div class="order-2 text-center">
                                             <a href="#" class="btn-round"> order now </a>
                                         </div>
-                                        <div class="pricing-hover clrbg-before clrbg-after transition"></div>
+                                        <div class="transition pricing-hover clrbg-before clrbg-after"></div>
                                     </div>
                                 </div>
                             </div>
@@ -406,8 +406,8 @@
     <span id="contact-us"></span>
     <section class="contact-wrap contact-2 pad-120">
         <span class="bg-text center wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s"> Contact </span> <br>
-        <div class="theme-container container">
-            <div class="title-wrap text-center">
+        <div class="container theme-container">
+            <div class="text-center title-wrap">
                 <h2 class="section-title wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s">contact us</h2>
                 <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s">Get in touch with us easily</p>
             </div>

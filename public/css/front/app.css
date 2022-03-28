@@ -1167,9 +1167,9 @@ text-shadow: none;
 		font-size: 2em;
 	}
 
-	
 
-/* 
+
+/*
  *  Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -1208,7 +1208,7 @@ text-shadow: none;
   }
 }
 
-/* 
+/*
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -1219,7 +1219,7 @@ text-shadow: none;
   transition: height 500ms ease-in-out;
 }
 
-/* 
+/*
  *  Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -1314,7 +1314,7 @@ text-shadow: none;
   display: block;
 }
 
-/* 
+/*
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -1329,7 +1329,7 @@ text-shadow: none;
   transform-style: preserve-3d;
 }
 
-/* 
+/*
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -4738,11 +4738,11 @@ text-shadow: none;
  *
  * file           : main-style.css
  * Desc           : GO - Stylesheet
- * Version        : 
- * Date           : 
+ * Version        :
+ * Date           :
  * Author         : jThemes Studio
- * Author URI     : 
- * Email          : 
+ * Author URI     :
+ * Email          :
  *
  * jThemes Studio. Copyright 2016. All Rights Reserved.
  * -------------------------------------------------------------------------- */
@@ -4756,55 +4756,55 @@ text-shadow: none;
     1.2 - Global properties (body, common classes, structure etc)
     1.3 - Page section block
     1.4 - Typography (section title, links, page dividers)
-    1.5 - Buttons 
-    1.6 - Form / Input / Textarea  
+    1.5 - Buttons
+    1.6 - Form / Input / Textarea
     1.7 - Theme Colors
     1.8 - Theme Fonts
-    
+
   2 - Header
 
-  3 - Home   
+  3 - Home
     3.1 - Banner
-    3.2 - Track Product
+    3.2 - Track Package
     3.3 - About Us
     3.4 - Calculate Your Cost
     3.5 - Steps
-    3.6 - Product Delivery
+    3.6 - Package Delivery
     3.7 - Testimonial
     3.8 - Pricing & Plans
     3.9 - Contact US
 
-  4 - Components / Shortcodes / Widget    
+  4 - Components / Shortcodes / Widget
     4.1 - Breadcrumbs
-    4.2 - Pagination   
-    4.3 - Rating stars    
+    4.2 - Pagination
+    4.3 - Rating stars
     4.4 - Blog post
-    4.5 - Comments  
+    4.5 - Comments
     4.6 - Widgets
     4.7 - Back to top button
 
-  5 - Login Popup and Search Popup   
-    5.1 - Login Popup   
-    5.2 - Search Popup   
-    
-  6 - Pages   
+  5 - Login Popup and Search Popup
+    5.1 - Login Popup
+    5.2 - Search Popup
+
+  6 - Pages
     6.1 - About Us
     6.2 - Tracking
-    6.3 - Contact 
+    6.3 - Contact
     6.4 - Error
     6.5 - Comingsoon
-              
-  7 - Footer  
 
-  8 - Responsive 
+  7 - Footer
+
+  8 - Responsive
 
  * -------------------------------------------------------------------------- */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,600,300,500,700);
 
-/******************************* 
-    1 - GENERAL CSS STARTS 
+/*******************************
+    1 - GENERAL CSS STARTS
 ********************************/
 
 
@@ -5904,13 +5904,13 @@ a:hover,
 /*------------------------- 1.8 Theme Fonts Ends --------------------- */
 
 
-/******************************* 
-    1 - GENERAL CSS ENDS 
+/*******************************
+    1 - GENERAL CSS ENDS
 ********************************/
 
 
-/******************************* 
-    2 - HEADER CSS STARTS 
+/*******************************
+    2 - HEADER CSS STARTS
 ********************************/
 
 
@@ -6176,13 +6176,13 @@ a:hover,
 /*-------------------- Header Style-3 Ends -------------------- */
 
 
-/******************************* 
-    2 - HEADER CSS ENDS 
+/*******************************
+    2 - HEADER CSS ENDS
 ********************************/
 
 
-/******************************* 
-    3 - HOME CSS STARTS 
+/*******************************
+    3 - HOME CSS STARTS
 ********************************/
 
 
@@ -6221,7 +6221,7 @@ a:hover,
 /*-------------------- 3.1 - Banner Ends -------------------- */
 
 
-/*-------------------- 3.2 - Track Product Starts -------------------- */
+/*-------------------- 3.2 - Track Package Starts -------------------- */
 
 .track-prod {
     background-color: #fefefe;
@@ -6268,7 +6268,7 @@ a:hover,
 }
 
 
-/*-------------------- 3.2 - Track Product Ends -------------------- */
+/*-------------------- 3.2 - Track Package Ends -------------------- */
 
 
 /*-------------------- 3.3 - About Us Starts -------------------- */
@@ -6443,7 +6443,7 @@ a:hover,
 /*-------------------- 3.5 - Steps Ends -------------------- */
 
 
-/*-------------------- 3.6 - Product Delivery Starts -------------------- */
+/*-------------------- 3.6 - Package Delivery Starts -------------------- */
 
 .prod-delivery {
     position: relative;
@@ -6475,7 +6475,7 @@ a:hover,
 }
 
 
-/*-------------------- 3.6 - Product Delivery Ends -------------------- */
+/*-------------------- 3.6 - Package Delivery Ends -------------------- */
 
 
 /*-------------------- 3.7 - Testimonial Starts -------------------- */
@@ -6816,12 +6816,12 @@ a:hover,
 /*-------------------- 3.9 - Contact US Ends -------------------- */
 
 
-/******************************* 
-    3 - HOME CSS ENDS 
+/*******************************
+    3 - HOME CSS ENDS
 ********************************/
 
 
-/****************************************************** 
+/******************************************************
     4 - Components / Shortcodes / Widget STARTS
 *******************************************************/
 
@@ -7169,13 +7169,13 @@ a:hover,
 /*-------------------- 4.7 - Back to top button Ends -------------------- */
 
 
-/*********************************************** 
-4 - Components / Shortcodes / Widget ENDS 
+/***********************************************
+4 - Components / Shortcodes / Widget ENDS
 ************************************************/
 
 
-/******************************* 
-    5 - LOGIN POPUP AND 
+/*******************************
+    5 - LOGIN POPUP AND
         SEARCH POPUP CSS STARTS
 ********************************/
 
@@ -7320,14 +7320,14 @@ a:hover,
 /*-------------------- 5.2 - Search Popup Ends -------------------- */
 
 
-/******************************* 
-    5 - LOGIN POPUP AND 
-        SEARCH POPUP CSS ENDS 
+/*******************************
+    5 - LOGIN POPUP AND
+        SEARCH POPUP CSS ENDS
 ********************************/
 
 
-/*********************************************** 
-6 - PAGES STARTS 
+/***********************************************
+6 - PAGES STARTS
 ************************************************/
 
 
@@ -7585,13 +7585,13 @@ a:hover,
 /*-------------------- 6.5 - Comingsoon Page Ends -------------------- */
 
 
-/*********************************************** 
-    6 - PAGES STARTS 
+/***********************************************
+    6 - PAGES STARTS
 ************************************************/
 
 
-/******************************* 
-    7 - FOOTER CSS STARTS 
+/*******************************
+    7 - FOOTER CSS STARTS
 ********************************/
 
 .footer-main {
@@ -7647,13 +7647,13 @@ a:hover,
 }
 
 
-/******************************* 
-    7 - FOOTER CSS STARTS 
+/*******************************
+    7 - FOOTER CSS STARTS
 ********************************/
 
 
-/*********************************************** 
-    8 - Responsive STARTS 
+/***********************************************
+    8 - Responsive STARTS
 ************************************************/
 
 @media (max-width:1200px) {
@@ -8178,8 +8178,8 @@ a:hover,
 }
 
 
-/*********************************************** 
-    8 - Responsive ENDS 
+/***********************************************
+    8 - Responsive ENDS
 ************************************************/
 
 .border {
