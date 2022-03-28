@@ -150,6 +150,18 @@ class ShipmentController extends Controller
      */
     public function update(Request $request, shipment $shipment)
     {
+        $request->validate([
+            'name' => 'required|string',
+            'phone' => 'required|string',
+            'address' => 'required|string',
+            'email' => 'required|string',
+            'description' => 'required',
+            'insurance' => 'required|numeric',
+            'quantity' => 'required|numeric',
+            'price' => 'required|numeric',
+            'created_at' => 'nullable|date',
+            'delivered_at' => 'required|date',
+        ]);
         $shipment->update($request->except('_token'));
         return redirect()->route('shipment.show', $shipment->id);
     }
