@@ -140,7 +140,7 @@
 
                 <!-- Header Topbar -->
                 <div class="top-bar font2-title1 white-clr">
-                    <div class="theme-container container">
+                    <div class="container theme-container">
                         <div style="display: flex; justify-content: space-between; align-items:center">
                             <div class="">
                                 <i class="fa fa-phone"></i> <span class="theme-clr"> {{ config('app.phone') }} </span>
@@ -154,7 +154,7 @@
 
                 <!-- Header Logo & Navigation -->
                 {{-- <nav class="menu-bar font2-title1 white-clr">
-                    <div class="theme-container container">
+                    <div class="container theme-container">
                         <div class="row">
                             <div class="col-md-3 col-sm-3">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
@@ -164,7 +164,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <a class="navbar-logo" href="{{ url('/') }}">
-                <div class=" pt-5 pb-10 effect animated fadeInLeft logo-text">Redline <small class="fs-18"></small></div>
+                <div class="pt-5 pb-10 effect animated fadeInLeft logo-text">Redline <small class="fs-18"></small></div>
                 </a>
                 </div>
                 <div class="col-md-9 col-sm-9 fs-12">
@@ -194,16 +194,16 @@
                             </div>
                             <nav class="Navbar__Items Navbar__Items--right">
                                 <div class="Navbar__Link">
-                                    <a href="#home">Home</a>
+                                    <a href="{{url('/')}}#home">Home</a>
                                 </div>
                                 <div class="Navbar__Link">
-                                    <a href="#about-us">About</a>
+                                    <a href="{{url('/')}}#about-us">About</a>
                                 </div>
                                 <div class="Navbar__Link">
-                                    <a href="#testimonials">Testimonials</a>
+                                    <a href="{{url('/')}}#testimonials">Testimonials</a>
                                 </div>
                                 <div class="Navbar__Link">
-                                    <a href="#contact-us">Contact</a>
+                                    <a href="{{url('/')}}#contact-us">Contact</a>
                                 </div>
                             </nav>
                         </div>
@@ -221,7 +221,7 @@
             <!-- Footer -->
             <footer>
                 <!-- <div class="footer-main pad-120 white-clr">
-            <div class="theme-container container">
+            <div class="container theme-container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 footer-widget offset-md-3">
                         <a href="#"> <img class="logo" alt="#" src="{{ asset('uploads/front/logo/logo-white.png') }}" /> </a>
@@ -265,7 +265,7 @@
         </div> -->
 
                 <div class="footer-bottom">
-                    <div class="theme-container container">
+                    <div class="container theme-container">
                         <div class="d-flex justify-content-between">
                             <div class="">
                                 <p> {{config('app.name')}}, © {{ date('Y') }}, All rights reserved </p>
@@ -281,7 +281,7 @@
         <!-- / Main Wrapper -->
 
         <!-- Top -->
-        <div class="to-top theme-clr-bg transition"> <i class="fa fa-angle-up"></i> </div>
+        <div class="transition to-top theme-clr-bg"> <i class="fa fa-angle-up"></i> </div>
 
         <script src="{{ asset('js/front/app.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
